@@ -44,6 +44,67 @@ https://templatemo.com/tm-528-elegance
 	  background-attachment: fixed; 
 	  background-size: 100% 100%;
 	}
+    .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.8); /* White background overlay */
+            padding: 20px;
+        }
+        .image {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image img {
+            max-width: 100%; /* Reduce image size to 40% */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .company-logo {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 30px; /* Adjust the size of company logos */
+            margin-right: 5px;
+        }
+
+        /*LeetCode section*/
+        .image-card {
+            background-color: white;
+            border: 1px solid white; /* Modify the border style here */
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .image-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .image-card img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Custom CSS to reduce the height of a specific image */
+        .reduce-height {
+            max-height: 300px; /* Adjust the desired height */
+        }
 	</style>
 
     </head>
@@ -74,7 +135,9 @@ https://templatemo.com/tm-528-elegance
                                     <li data-menuanchor="slide02"><a href="#slide02">About</a></li>
                                     <li data-menuanchor="slide03"><a href="#slide03">Notables</a></li>
                                     <li data-menuanchor="slide04"><a href="#slide04">Skills</a></li>
-                                    <li data-menuanchor="slide05"><a href="#slide05">Projects</a></li>
+                                    <li data-menuanchor="slide05"><a href="#slide05">Accomplishments</a></li>
+                                    <li data-menuanchor="slide06"><a href="#slide06">Leetcode</a></li>
+                                    <li data-menuanchor="slide07"><a href="#slide07">Projects</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -108,17 +171,13 @@ https://templatemo.com/tm-528-elegance
                                         <div class="about-contentbox">
                                             <div class="animate" data-animate="fadeInUp">
                                                 <span>About</span>
-                                                <p>Working as <strong>Specialist Programmer</strong> at <strong>Infosys</strong>.
-                                                I am a <strong>Full Stack</strong> developer with industry experience in developing web applications. I specialize in <strong>Java</strong> and <strong>Angular</strong>, also have professional experience working with <strong>Spring Boot</strong> and <strong>Angular 8</strong>. 
-                                                </p>
-                                                <p>
-                                                I have extensive experience working in an <strong>Agile</strong> development environment. Profound knowledge of <strong>J2EE</strong>, <strong>RESTful web services</strong>, <strong>Micro services</strong> and development of service oriented applications. Sound knowledge of understanding on <strong>Design Patterns, Object Oriented Programming, Data Structures and Algorithms</strong>. 
-                                                </p>
+                                                <p>I currently hold the esteemed position of <strong>Assistant Manager</strong> at <strong>Jio Platforms Limited</strong>. My professional journey revolves around the realm of software development, with a focus on crafting high-quality web and mobile applications. I possess expertise in <strong>Java</strong> and <strong>Angular</strong> and have garnered substantial experience working with <strong>Spring Boot</strong> and <strong>Angular 9</strong>.</p>
+                                                <p>My career has been significantly enriched by my extensive involvement in <strong>Agile</strong> development methodologies. My proficiency extends to a diverse range of technologies, including <strong>Flutter</strong>, <strong>AWS</strong>, <strong>J2EE</strong>, <strong>RESTful web services</strong>, <strong>Microservices</strong>, and the architecture of service-oriented applications. Furthermore, I have demonstrated a deep understanding of <strong>Design Patterns</strong>, <strong>Object-Oriented Programming</strong>, <strong>Data Structures</strong>, and <strong>Algorithms</strong>.</p>
                                             </div>
                                             <div class="facts-list owl-carousel">
                                             	<div class="item animate" data-animate="fadeInUp">
                                                     <div class="counter-box">
-                                                        <i class="fa fa-desktop counter-icon" aria-hidden="true"></i><span class="count-number">1+</span> Working Years
+                                                        <i class="fa fa-desktop counter-icon" aria-hidden="true"></i><span class="count-number">3+</span> Working Years
                                                     </div>
                                                 </div>
                                                 <div class="item animate" data-animate="fadeInUp">
@@ -128,7 +187,7 @@ https://templatemo.com/tm-528-elegance
                                                 </div>
                                                 <div class="item animate" data-animate="fadeInUp">
                                                     <div class="counter-box">
-                                                        <i class="fa fa-trophy counter-icon" aria-hidden="true"></i><span class="count-number">3+</span> Projects Worked
+                                                        <i class="fa fa-trophy counter-icon" aria-hidden="true"></i><span class="count-number">5+</span> Projects Worked
                                                     </div>
                                                 </div>
                                             </div>
@@ -139,7 +198,9 @@ https://templatemo.com/tm-528-elegance
                                     	<br>
                                     	<br>
                                     	<br>
-                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="images/me2.jpg" class="rounded" alt="tayalarajan"></figure>
+                                        <figure class="about-img animate" data-animate="fadeInUp">
+                                            <img src="images/me2.jpg" class="rounded" alt="tayalarajan" style="width: 75%; height: 75%;">
+                                        </figure>                                        
                                     </div>
                                 </div>
                             </div>
@@ -162,36 +223,33 @@ https://templatemo.com/tm-528-elegance
                                         <div class="item animate" data-animate="fadeInUp">
                                             <div class="testimonial-item">
                                                 <div class="client-row">
-                                                    <img src="images/cert1.png"  alt="">
+                                                    <img src="images/cert4.png"  alt="">
                                                 </div>
                                                 <div class="testimonial-content">
-                                                    <h4>Infosys Certificate</h4>
-                                                    <p>"I have cleared two rounds of Infy TQ Conducted by <strong>Infosys</strong> and got this certificate along with the offer as <strong>Digital Specialist Engineer</strong>."</p>
-                                                    <span>Infosys certified software programmer</span>
+                                                    <h4>Google Code Jam 2022</h4>
+                                                    <p>"Competed in Google Code Jam, demonstrating strong problem-solving skills while tackling complex algorithmic challenges on a global platform, contributing to my growth as a competitive coder."</p>
                                                 </div>                                           
                                             </div>
                                         </div>
                                         <div class="item animate" data-animate="fadeInUp">
                                             <div class="testimonial-item">
                                                 <div class="client-row">
-                                                    <img src="images/cert3.jpg" alt="">
+                                                    <img src="images/cert5.png" alt="">
                                                 </div>
                                                 <div class="testimonial-content">
-                                                    <h4>Zoho Internship Certificate</h4>
-                                                    <p>"I am glad that I was able to clear serveral coding rounds and grab internship oppurtunity at <strong>ZOHO</strong>."</p>
-                                                    <span>Summer Intership at ZOHO</span>
+                                                    <h4>Google Kick Start 2022</h4>
+                                                    <p>"Thrived in Google Kick Start, honing coding abilities with a diverse range of challenges and competing on an international scale, fostering my love for problem-solving."</p>
                                                 </div>                                           
                                             </div>
                                         </div>
                                         <div class="item animate" data-animate="fadeInUp">
                                             <div class="testimonial-item">
                                                 <div class="client-row">
-                                                    <img src="images/cert2.jpg" alt="">
+                                                    <img src="images/cert6.png" alt="">
                                                 </div>
                                                 <div class="testimonial-content">
-                                                    <h4>HCL Certificate</h4>
-                                                    <p>"Done <strong>Software Programmer in C, C++</strong> certificate in <strong>HCL</strong> during my high school."</p>
-                                                    <span>HCL certified software developer.</span>
+                                                    <h4>Techgig Code Gladiators 2022</h4>
+                                                    <p>"Excelled in Code Gladiators 2022, where I showcased my technical prowess and determination, competing among top-notch coders in a prestigious coding challenge, a valuable experience for my career."</p>
                                                 </div>                                           
                                             </div>
                                         </div>
@@ -222,7 +280,7 @@ https://templatemo.com/tm-528-elegance
                                             </div>          
                                         </div>
                                         <div class="skill-item">
-                                            <h6>Java</h6>
+                                            <h6>Angular</h6>
                                             <div class="skill-bar">
                                                 <span>78%</span>
                                                 <div class="filled-bar-2"></div>
@@ -236,19 +294,98 @@ https://templatemo.com/tm-528-elegance
                                             </div>          
                                         </div>
                                         <div class="skill-item">
-                                            <h6>RESTful Services</h6>
+                                            <h6>AWS</h6>
                                             <div class="skill-bar">
                                                 <span>75%</span>
                                                 <div class="filled-bar-4"></div>
                                             </div>          
                                         </div>
                                         <div class="skill-item last-skill">
-                                            <h6>MySQL</h6>
+                                            <h6>OracleDB</h6>
                                             <div class="skill-bar">
                                                 <span>78%</span>
                                                 <div class="filled-bar-2"></div>
                                             </div>          
                                         </div>                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row">
+                <div class="section-inner">
+                    <div class="container">
+                        <div class="image-gallery">
+                            <div class="image">
+                                <img src="images/cert1.png" alt="Certificate 1">
+                                <img src="images/infosys.png" alt="Infosys Logo" class="company-logo">
+                                <p style="color: black;">Infosys certified</p>
+                            </div>
+                            <div class="image">
+                                <img src="images/cert2.jpg" alt="Certificate 2">
+                                <img src="images/hcl.png" alt="HCL Logo" class="company-logo">
+                                <p style="color: black;">HCL certified</p>
+                            </div>
+                            <div class="image">
+                                <img src="images/cert3.jpg" alt="Certificate 3">
+                                <img src="images/zoho.png" alt="Zoho Logo" class="company-logo">
+                                <p style="color: black;">Zoho Internship</p>
+                            </div>
+                            <div class="image">
+                                <img src="images/cert4.png" alt="Certificate 4">
+                                <img src="images/google.png" alt="Google Logo" class="company-logo">
+                                <p style="color: black;">Code Jam</p>
+                            </div>
+                            <div class="image">
+                                <img src="images/cert5.png" alt="Certificate 5">
+                                <img src="images/google.png" alt="Google Logo" class="company-logo">
+                                <p style="color: black;">Kick Start</p>
+                            </div>
+                            <div class="image">
+                                <img src="images/cert6.png" alt="Certificate 6">
+                                <img src="images/techgig.png" alt="Techgig Logo" class="company-logo">
+                                <p style="color: black;">Code Gladiators</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row">
+                <div class="section-inner">
+                    <div class="container mt-5" style="background-color: black;">
+                        <!-- First Row (Full-width image) -->
+                        <div class="row">
+                            <div class="image-card">
+                                <p style="color: black;">365 days of coding streak</p>
+                                <img src="images/leetcode1.png" alt="LeetCode 1" class="img-fluid">
+                            </div>
+                        </div>
+                
+                        <!-- Second Row (Split images into two columns) -->
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-4">
+                                <div class="image-card" style="background-color: white;">
+                                    <p style="color: black;">Worldwide ranking</p>
+                                    <img src="images/leetcode3.png" alt="LeetCode 3" class="img-fluid reduce-height">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="row">
+                                    <div class="col-12 mb-2">
+                                        <div class="image-card">
+                                            <p style="color: black;">Solved 875 leetcode problems</p>
+                                            <img src="images/leetcode4.png" alt="LeetCode 4" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="image-card">
+                                            <p style="color: black;">Achieved badges</p>
+                                            <img src="images/leetcode2.png" alt="LeetCode 2" class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -263,6 +400,47 @@ https://templatemo.com/tm-528-elegance
                         <div class="col-md-8 wide-col-laptop">
                             <div class="title-block animate" data-animate="fadeInUp">
                             	<span>Projects</span>
+                                <h2>Jio SecureID (Authentication)</h2>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="about-contentbox">
+                                            <div class="animate" data-animate="fadeInUp">
+                                                <p>
+                                                    Jio SecureID is highly secure digital identity and authentication product that allows secure login to any application or website.
+                                                </p>
+                                                <span>Role</span>
+                                                <p>	▪ <strong>Full Stack Development:</strong> Creating end-to-end solutions with Spring Boot, Angular 9, AWS, OracleDB, and CassandraDB.<br>
+													▪ <strong>Microservices:</strong> Designing scalable microservices with RESTful APIs.<br> 
+													▪ <strong>DevOps Proficiency:</strong> Expertly managing deployments using Azure DevOps, Jenkins, and Docker.<br>
+													▪ <strong>Stack Mastery:</strong> Skillful use of diverse technologies for robust applications.
+												</p>
+                                                <span>Technology</span>
+                                                <p>Spring Boot, RESTful API’s, Micro services, Angular 9, AWS, OracleDB, CassandraDB, Azure devops, Jenkins, Docker
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    	<br>
+                                    	<br>
+                                    	<br>
+                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="images/project4.png" class="rounded" alt="Auto Data"></figure>
+                                        <span><a href="https://play.google.com/store/apps/details?id=com.jio.secureid&hl=en&gl=US&pli=1" target="_blank">View Android App</a></span><br>
+                                        <span><a href="https://apps.apple.com/us/app/jio-secureid/id1610736799" target="_blank">View Ios App</a></span> | 
+                                        <span><a href="https://secureid.jio.com/secureid/product/#/Introduction" target="_blank">View Website</a></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
                                 <h2>Auto Data (Automotive)</h2>
                             </div>
                             <div class="row">
@@ -384,7 +562,7 @@ https://templatemo.com/tm-528-elegance
                                                 <img src="images/being1.jpg" alt="Tayalarajan Party">
                                             </div>
                                             <div class="thumb-inner animate" data-animate="fadeInUp">
-                                                <h4>Fun & Hangouts</h4>
+                                                <h4>Gym</h4>
                                             </div>
                                         </div>
                                     </div>
