@@ -56,9 +56,8 @@ https://templatemo.com/tm-528-elegance
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            background: rgba(255, 255, 255, 0.8); /* White background overlay */
-            padding: 20px;
         }
+
         .image {
             flex: 0 0 calc(33.33% - 20px);
             margin: 10px;
@@ -66,23 +65,55 @@ https://templatemo.com/tm-528-elegance
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .image img {
-            max-width: 100%; /* Reduce image size to 40% */
+            max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
         }
-        .image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .caption p {
+            color: black;
+            margin-top: 5px;
+        }
+
+        /* Apply styles for mobile view */
+        @media (max-width: 767px) {
+            .image-gallery {
+                justify-content: center;
+            }
+
+            .image {
+                flex: 0 0 calc(50% - 20px);
+            }
         }
         .company-logo {
             position: absolute;
             bottom: 10px;
             left: 10px;
-            width: 30px; /* Adjust the size of company logos */
+            width: 50px; /* Adjust the size of company logos */
             margin-right: 5px;
         }
+
+        @media (max-width: 767px) {
+            .company-logo {
+                width: 20px; /* Adjust the size for smaller screens */
+            }
+        }
+
+        
+
 
         /*LeetCode section*/
         .image-card {
