@@ -140,7 +140,7 @@
                 margin: 30,
                 autoplay: true,
                 smartSpeed: 700,
-                autoplayTimeout: 6000,
+                autoplayTimeout: 2000,
                 responsive: {
                     0: {
                         items: 1,
