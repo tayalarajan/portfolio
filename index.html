@@ -138,11 +138,38 @@ https://templatemo.com/tm-528-elegance
             max-height: 300px; /* Adjust the desired height */
         }
 
+        html, body {
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(135,206,235,0.9) 35%, rgba(0,0,0,0.8) 65%, rgba(135,206,235,1) 100%);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
+            position: relative;
+            z-index: 0;
+            overflow-x: hidden;
+        }
+
+        /* Gradient overlay using ::before (works perfectly on mobile too) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,191,255,0.9) 35%, rgba(0,0,0,0.8) 65%, rgba(0,191,255,1) 100%);
+        }
+
+        @media (max-width: 767px) {
+            #header {
+                height: 70px;
+            }
+
+            .section-inner {
+                padding-top: 70px; /* match this to #header height */
+            }
         }
 
 
