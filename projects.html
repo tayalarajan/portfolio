@@ -169,6 +169,111 @@ https://templatemo.com/tm-528-elegance
             }
         }
 
+        .welcome-box .lead { margin-top: 10px; }
+        .welcome-box p { max-width: 600px; margin: 10px auto; color: #aaa; }
+
+        /* — Glassmorphism Container — */
+        .glass-container {
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(31,38,135,0.15);
+            color: #fff;
+        }
+
+        /* — Title & Subtitle — */
+        .project-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+        .tag-gradient {
+            display: inline-block;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        /* — Summary & Roles — */
+        .summary-text {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .role-section { margin-bottom: 25px; text-align: left; }
+        .role-section p {
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 6px 0;
+        }
+        .section-heading {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* — Tech Tags — */
+        .tech-tags-left {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: left;
+        }
+        .tech-tags-left span {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+        .tech-tags-left span:hover { transform: scale(1.05); }
+
+        /* — CTA Button — */
+        .btn-gemini-gradient {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 22px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #111;
+            background: linear-gradient(to right, #fff, #f3f4f6);
+            border: 1px solid #e5e7eb;
+            border-radius: 24px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .btn-gemini-gradient:hover {
+            background: linear-gradient(to right, #f9fafb, #e5e7eb);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            color: #000;
+        }
+
+        /* — Links in project cards — */
+        .glass-container a,
+        .glass-container a:hover,
+        .glass-container a:focus {
+            text-decoration: none !important;   /* no underline */
+        }
+
 	</style>
 
     </head>
@@ -188,7 +293,7 @@ https://templatemo.com/tm-528-elegance
             <div class="container-fluid">
                 <div class="navbar">
                     <a href="index.html" id="logo" title="Elegance by TemplateMo">
-                        Home
+                        Tayalarajan
                     </a>
                     <div class="navigation-row">
                         <nav id="navigation">
@@ -197,11 +302,10 @@ https://templatemo.com/tm-528-elegance
                                 <ul class="navigation-menu nav navbar-nav navbars" id="nav">
                                     <li data-menuanchor="slide01" class="active"><a href="#slide01">Projects</a></li>
                                     <li data-menuanchor="slide02"><a href="#slide02">Google Gemini</a></li>
-                                    <li data-menuanchor="slide03"><a href="#slide03">Tayal AI</a></li>
-                                    <li data-menuanchor="slide04"><a href="#slide04">ERP System</a></li>
-                                    <li data-menuanchor="slide05"><a href="#slide05">Predicting Comfort</a></li>
-                                    <li data-menuanchor="slide06"><a href="#slide06">Jio SecureID</a></li>
-                                    <li data-menuanchor="slide07"><a href="#slide07">Covid Essentials</a></li>
+                                    <li data-menuanchor="slide03"><a href="#slide03">Jio SecureID</a></li>
+                                    <li data-menuanchor="slide04"><a href="#slide04">Digital Twin</a></li>
+                                    <li data-menuanchor="slide04"><a href="#slide05">Tayal AI</a></li>
+                                    <li data-menuanchor="slide05"><a href="#slide06">ERP System</a></li>
                                     <!--
                                     <li data-menuanchor="slide06"><a href="#slide06">TN40 Stores</a></li>
                                     <li data-menuanchor="slide07"><a href="#slide07">Afroza</a></li>
@@ -224,376 +328,532 @@ https://templatemo.com/tm-528-elegance
 
         <div id="fullpage" class="fullpage-default">
             <div class="section animated-row" data-section="slide01">
-                <div class="section-inner">
-                    <div class="welcome-box">
-                        <span class="welcome-first animate" data-animate="fadeInUp">Explore My</span>
-                        <h1 class="welcome-title animate" data-animate="fadeInUp">Projects</h1>
-                        <p class="animate" data-animate="fadeInUp">Here are some of the key projects I've worked on, showcasing my skills and expertise.</p>
-                        <div class="scroll-down next-section animate data-animate=" fadeInUp><img src="images/mouse-scroll.png" alt=""><span>Explore Now</span></div>
-                    </div>
+            <div class="section-inner d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="welcome-box text-center animate" data-animate="fadeInUp">
+                
+                <!-- Intro label -->
+                <span class="welcome-first" style="font-size: 18px; letter-spacing: 2px; color: #aaa;">
+                    Explore My
+                </span>
+                
+                <!-- Main headline -->
+                <h1 class="welcome-title" style="font-size: 52px; font-weight: 800; color: #ffffff; margin-top: 10px;">
+                    Projects
+                </h1>
+                
+                <!-- Sub-heading -->
+                <p class="lead" style="font-size: 20px; color: #fff; margin-top: 10px;">
+                    Key works in AI, Cloud & Full-Stack Engineering
+                </p>
+                
+                <!-- Brief description -->
+                <p style="font-size: 15px; color: #aaa; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Dive into a curated selection of projects that highlight my expertise in Generative AI, scalable cloud architectures, and seamless end-to-end application development.
+                </p>
+                
+                <!-- Primary CTA -->
+                <div class="mt-4">
+                    <a href="#slide02" class="btn btn-explore animate" data-animate="fadeInUp">
+                    Discover Now
+                    </a>
                 </div>
-            </div>            
+                </div>
+            </div>
+            </div>
+          
 
             <!-- Block 1 — Google DeepMind (Gemini) -->
-            <div class="section animated-row" data-section="slide04">
+            <div class="section animated-row" data-section="slide02">
                 <div class="section-inner">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center align-items-center">
                         <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Google DeepMind – Gemini</h2>
-                                <p>Associated with Turing</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Worked on the Gemini model under the Google DeepMind project, focusing on improving prompt accuracy and response reliability. Responsibilities included systematic evaluation of model outputs, writing unit tests to highlight misalignments, and enhancing Gemini’s problem-solving consistency.
+                            <div class="glass-container animate" data-animate="fadeInUp">
+                                <div class="title-block">
+                                    <h3 style="font-weight: 800;">Google DeepMind – Gemini</h3>
+                                    <p class="tag-gradient">Associated with Turing</p>
+                                </div>
+
+                                <div class="row align-items-start mt-4">
+                                    <!-- Left Content -->
+                                    <div class="col-md-7">
+                                        <div class="glass-content">
+                                            <p class="summary-text">
+                                                Collaborated on the Google DeepMind Gemini project, enhancing LLM accuracy and reliability by evaluating prompt responses and refining output alignment through structured testing pipelines.
                                             </p>
-                                            <span>Role</span>
-                                            <p>
-                                                ▪ <strong>Prompt Engineering & Evaluation:</strong> Designed and validated prompt structures to measure Gemini’s understanding.<br>
-                                                ▪ <strong>Data-Driven Fine-Tuning:</strong> Collaborated with engineers to adjust training pipelines based on evaluation metrics.<br>
-                                                ▪ <strong>Dockerized Testing:</strong> Built containerized testing environments for consistent and scalable workflow deployment.<br>
-                                            </p>
-                                            <span>Technology</span>
-                                            <p>
-                                                LLM, LLMOps, AI, Fine Tuning, Prompt Engineering, Python, Docker
-                                            </p>
+
+                                            <div class="role-section">
+                                                <h6 class="section-heading center-heading">Key Contributions</h6>
+                                                <p><strong>Prompt Engineering & Evaluation:</strong> Designed and validated prompt structures for complex comprehension tasks.</p>
+                                                <p><strong>Data-Driven Fine-Tuning:</strong> Coordinated metrics-driven iteration loops with engineering teams.</p>
+                                                <p><strong>Dockerized Testing:</strong> Built scalable testing workflows for production-grade deployment.</p>
+                                            </div>
+
+                                            <div class="role-section">
+                                                <h6 class="section-heading center-heading">Technologies Used</h6>
+                                                <div class="tech-tags-left">
+                                                    <span>Python</span>
+                                                    <span>Docker</span>
+                                                    <span>Fine-Tuning</span>
+                                                    <span>LLM</span>
+                                                    <span>LLMOps</span>
+                                                    <span>Prompt Engineering</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Project/project1.png" class="rounded" alt="ERP System Development">
-                                    </figure>
-                                    <span><a href="https://gemini.google.com/app" target="_blank">Ask Gemini Anything</a></span>
+
+                                    <!-- Image + CTA -->
+                                    <div class="col-md-5 text-center">
+                                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom: 15px;">
+                                            <img src="images/Project/project1.png" class="rounded img-fluid" alt="Gemini Project" style="max-width:260px;">
+                                        </figure>
+                                        <a href="https://gemini.google.com/app" target="_blank" class="btn-gemini-gradient">
+                                            Ask Gemini Anything
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div>
 
-            <!-- Block 2 — Tayal AI (Professional Assistant) -->
-            <div class="section animated-row" data-section="slide04">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Tayal AI (AI Assistant)</h2>
-                                <p>Independently Developed</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Tayal AI is a large language model–powered assistant that showcases my professional background, projects, certifications, and freelance work. It uses a synthetic and balanced dataset, fine-tuned for precision and relevance using supervised learning techniques.
-                                            </p>
-                                            <span>Role</span>
-                                            <p>
-                                                ▪ <strong>Data Curation & Model Training:</strong> Created a detailed dataset covering all aspects of my technical journey and fine-tuned the model on AWS SageMaker.<br>
-                                                ▪ <strong>End-to-End Deployment:</strong> Deployed the LLM on AWS EC2 with a secure and responsive backend.<br>
-                                                ▪ <strong>Full Stack Development:</strong> Built a seamless user interface and robust backend APIs to ensure real-time interaction.<br>
-                                            </p>
-                                            <span>Technology</span>
-                                            <p>
-                                                AWS, Amazon (SageMaker, EC2, S3), LLM, Fine Tuning, React.js, Next.js, Node.js, Express.js
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Project/project2.png" class="rounded" alt="ERP System Development">
-                                    </figure>
-                                    <span><a href="https://tayal-ai.netlify.app/" target="_blank">Start a Conversation with Tayal AI</a></span>
-                                </div>
+            <!-- Block — Jio SecureID (Authentication) -->
+            <div class="section animated-row" data-section="slide03">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    <!-- Title + Subtitle -->
+                    <div class="title-block">
+                        <h3 class="project-title">Jio SecureID (Authentication)</h3>
+                        <p class="tag-gradient">Associated with Reliance Jio</p>
+                    </div>
+                    <div class="row align-items-start mt-4">
+                        <!-- Left Column -->
+                        <div class="col-md-7">
+                        <p class="summary-text">Jio SecureID is a robust digital-identity platform that delivers friction‑less, multi‑factor authentication at telecom scale.</p>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Key Contributions</h6>
+                            <p><strong>Full‑Stack Development:</strong> Spring Boot, Angular 9, AWS, OracleDB &amp; CassandraDB.</p>
+                            <p><strong>Microservices Architecture:</strong> Designed secure RESTful microservices with JWT &amp; rate‑limiting.</p>
+                            <p><strong>CI/CD &amp; DevOps:</strong> Automated pipelines via Kubernetes, Jenkins, and Docker for zero‑downtime releases.</p>
+                        </div>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technologies Used</h6>
+                            <div class="tech-tags-left">
+                            <span>Java</span><span>Spring Boot</span><span>Angular 9</span><span>AWS</span><span>EC2</span><span>EKS</span><span>REST APIs</span><span>Microservices</span><span>Redis</span><span>Kafka</span><span>Kubernetes</span><span>Docker</span><span>Jenkins</span><span>OracleDB</span><span>CassandraDB</span><span>DataDog</span><span>Terraform</span><span>Jfrog</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="section animated-row" data-section="slide04">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>ERP System (Business)</h2>
-                                <p>Associated with Deneka IT</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                An ERP system integrating CRM, Ticketing, and Marketplace functionalities for seamless business operations, customer management, and service delivery.
-                                            </p>
-                                            <span>Role</span>
-                                            <p>    
-                                                ▪ <strong>Product Planning & System Design:</strong> Engaging in the initial stages of product development, including planning and designing the system architecture.<br>
-                                                ▪ <strong>Full Stack Development:</strong> Contributing to both front-end and back-end development, ensuring seamless integration of various components.<br>
-                                                ▪ <strong>Research & Integration:</strong> Conducting continuous research to identify and integrate new technologies and features into our platform.<br>
-                                            </p>
-                                            <span>Technology</span>
-                                            <p>
-                                                Snowflake, Node.js, React.js, Express.js, JWT
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Project/project3.jpg" class="rounded" alt="ERP System Development">
-                                    </figure>
-                                </div>
-                            </div>
+                        </div>
+                        <!-- Right Column -->
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project5.png" class="rounded img-fluid" alt="Jio SecureID Screenshot" style="max-width:260px;">
+                        </figure>
+                        <a href="https://play.google.com/store/apps/details?id=com.jio.secureid&hl=en&gl=US" target="_blank" class="btn-gemini-gradient mb-2">Android App</a>
+                        <a href="https://apps.apple.com/us/app/jio-secureid/id1610736799" target="_blank" class="btn-gemini-gradient mb-2">IOS App</a>
+                        <a href="https://secureid.jio.com/secureid/product/#/Introduction" target="_blank" class="btn-gemini-gradient">Product Website</a>
                         </div>
                     </div>
+                    </div>
+                </div>
                 </div>
             </div>
-            
+            </div>
+
+            <!-- Block — Digital Twin (Medical Hardware) -->
+            <div class="section animated-row" data-section="slide04">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    
+                    <!-- Title + Subtitle -->
+                    <div class="title-block">
+                        <h3 class="project-title">Digital Twin – Cloud Lab Devices</h3>
+                        <p class="tag-gradient">
+                        Patented • Associated with <strong>AirLabOne</strong>
+                        </p>
+                    </div>
+
+                    <div class="row align-items-start mt-4">
+                        <!-- Left Column -->
+                        <div class="col-md-7">
+                        <p class="summary-text">
+                            AirLabOne lets healthcare and research teams <strong>teach, rent &amp; collaborate</strong> on
+                            high-value equipment through secure, real-time digital twins.  
+                            Interoperable access, continuous traceability, and predictive insights turn physical
+                            devices into a greener, on-demand cloud of laboratory hardware.
+                        </p>
+
+                        <!-- Contributions -->
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">My Contributions</h6>
+                            <p><strong>Predictive Analytics&nbsp;</strong>, <strong>Compliance &amp; Auditability&nbsp;</strong>, <strong>Digital Twin&nbsp;</strong> </p>
+                        </div>
+
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Public Highlights</h6>
+                            <p>Multiple patents secured across AU, US &amp; EU.</p>
+                        </div>
+
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Key Technologies</h6>
+                            <div class="tech-tags-left">
+                            <span>AWS</span><span>NVIDIA Jetson</span><span>Python</span><span>React.js</span><span>Node.js</span><span>Express.js</span><span>Three.js</span><span>REST API's</span><span>Microservices</span><span>Firebase</span>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project9.png" class="rounded img-fluid" alt="Digital Twin Overview" style="max-width:260px;">
+                        </figure>
+                        <a href="https://airlabone.com" target="_blank" class="btn-gemini-gradient">Explore AirLabOne</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- Block 2 — Tayal AI (AI Assistant) -->
             <div class="section animated-row" data-section="slide05">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Predicting Comfort (Airline)</h2>
-                                <p>Associated with Macquarie University</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                This project analyzes the Airline Passenger Satisfaction dataset to enhance customer service, boost operational efficiency, and support strategic decision-making. Key objectives include:
-                                            </p>
-                                            <span>Role</span>
-                                            <p>    
-                                                ▪ <strong>Customer Service Improvement:</strong> Identified factors influencing satisfaction and targeted areas like on-board services, check-in, and in-flight amenities.<br>
-                                                ▪ <strong>Passenger Segmentation:</strong> Predicted satisfaction based on data types (e.g., Class, Type of Travel) for tailored improvements.<br>
-                                                ▪ <strong>Predictive Modeling:</strong> Compared models like Logistic Regression, KNN, Neural Networks, and Random Forests to predict satisfaction.<br>
-                                            </p>
-                                            <span>Technology</span>
-                                            <p>
-                                                Logistic Regression, KNN, Neural Networks, Random Forests, Python, Jupyter Notebook
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Project/project4.jpg" class="rounded" alt="Airline Passenger Satisfaction">
-                                    </figure>
-                                    <span><a href="https://github.com/Tayalarajan7/Kaggle/blob/main/Airline%20Quality%20Ratings/Airline%20Quality%20Ratings.ipynb" target="_blank">View Project on GitHub</a></span>
-                                </div>
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    
+                    <!-- Title + Subtitle -->
+                    <div class="title-block">
+                        <h3 class="project-title">Tayal AI (AI Assistant)</h3>
+                        <p class="tag-gradient">Independently Developed</p>
+                    </div>
+                    
+                    <div class="row align-items-start mt-4">
+                        
+                        <!-- Left: Summary + Role + Tech -->
+                        <div class="col-md-7">
+                        <p class="summary-text">
+                            Tayal AI is a large language model–powered assistant that showcases my professional background, projects, certifications, and freelance work. It uses a synthetic and balanced dataset, fine-tuned for precision and relevance using supervised learning techniques.
+                        </p>
+                        
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Role</h6>
+                            <p><strong>Data Curation & Model Training:</strong> Created a detailed dataset covering all aspects of my technical journey and fine-tuned the model on AWS SageMaker.</p>
+                            <p><strong>End-to-End Deployment:</strong> Deployed the LLM on AWS EC2 with a secure and responsive backend.</p>
+                            <p><strong>Full Stack Development:</strong> Built a seamless user interface and robust backend APIs to ensure real-time interaction.</p>
+                        </div>
+                        
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technology</h6>
+                            <div class="tech-tags-left">
+                            <span>AWS</span>
+                            <span>SageMaker</span>
+                            <span>EC2</span>
+                            <span>S3</span>
+                            <span>LLM</span>
+                            <span>Fine Tuning</span>
+                            <span>React.js</span>
+                            <span>Next.js</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
                             </div>
                         </div>
+                        </div>
+                        
+                        <!-- Right: Image + CTA -->
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project2.png" class="rounded img-fluid" alt="Tayal AI" style="max-width:260px;">
+                        </figure>
+                        <a href="https://tayal-ai.netlify.app/" target="_blank" class="btn-gemini-gradient">
+                            Start a Conversation with Tayal AI
+                        </a>
+                        </div>
+                        
+                    </div>
                     </div>
                 </div>
+                </div>
+            </div>
             </div>
 
+
+
+
+            <!-- Block — ERP System (Business) -->
             <div class="section animated-row" data-section="slide06">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Jio SecureID (Authentication)</h2>
-                                <p>Associated with Reliance Jio</p>
-                            </div>
-                            <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="about-contentbox">
-                                            <div class="animate" data-animate="fadeInUp">
-                                                <p>
-                                                    Jio SecureID is highly secure digital identity and authentication product that allows secure login to any application or website.
-                                                </p>
-                                                <span>Role</span>
-                                                <p>	▪ <strong>Full Stack Development:</strong> Creating end-to-end solutions with Spring Boot, Angular 9, AWS, OracleDB, and CassandraDB.<br>
-													▪ <strong>Microservices:</strong> Designing scalable microservices with RESTful APIs.<br> 
-													▪ <strong>DevOps Proficiency:</strong> Expertly managing deployments using Azure DevOps, Jenkins, and Docker.<br>
-													▪ <strong>Stack Mastery:</strong> Skillful use of diverse technologies for robust applications.
-												</p>
-                                                <span>Technology</span>
-                                                <p>Spring Boot, RESTful API’s, Micro services, Angular 9, AWS, OracleDB, CassandraDB, Azure devops, Jenkins, Docker
-												</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                    	<br>
-                                    	<br>
-                                    	<br>
-                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="images/Project/project5.png" class="rounded" alt="Auto Data"></figure>
-                                        <span><a href="https://play.google.com/store/apps/details?id=com.jio.secureid&hl=en&gl=US&pli=1" target="_blank">View Android App</a></span><br>
-                                        <span><a href="https://apps.apple.com/us/app/jio-secureid/id1610736799" target="_blank">View Ios App</a></span> | 
-                                        <span><a href="https://secureid.jio.com/secureid/product/#/Introduction" target="_blank">View Website</a></span>
-                                    </div>
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+
+                    <!-- Title + Subtitle -->
+                    <div class="title-block">
+                        <h3 class="project-title">ERP System (Business)</h3>
+                        <p class="tag-gradient">Associated with Deneka IT</p>
+                    </div>
+
+                    <div class="row align-items-start mt-4">
+                        <!-- Left: Summary + Role + Tech -->
+                        <div class="col-md-7">
+                        <p class="summary-text">
+                            An ERP system integrating CRM, Ticketing, and Marketplace functionalities for seamless business operations, customer management, and service delivery.
+                        </p>
+
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Role</h6>
+                            <p><strong>Product Planning & System Design:</strong> Engaging in the initial stages of product development, including planning and designing the system architecture.</p>
+                            <p><strong>Full Stack Development:</strong> Contributing to both front-end and back-end development, ensuring seamless integration of various components.</p>
+                            <p><strong>Research & Integration:</strong> Conducting continuous research to identify and integrate new technologies and features into our platform.</p>
+                        </div>
+
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technology</h6>
+                            <div class="tech-tags-left">
+                            <span>Snowflake</span>
+                            <span>Node.js</span>
+                            <span>React.js</span>
+                            <span>Express.js</span>
+                            <span>JWT</span>
                             </div>
                         </div>
+                        </div>
+
+                        <!-- Right: Image -->
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project3.jpg" class="rounded img-fluid" alt="ERP System Development" style="max-width:260px;">
+                        </figure>
+                        </div>
                     </div>
+
+                    </div>
+                </div>
                 </div>
             </div>
-
-            <div class="section animated-row" data-section="slide07">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Covid Essentials (NGO)</h2>
-                                <p>Connecting communities with essential resources.</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                A platform that maps and connects people in need with NGOs and agencies for quick assistance during the pandemic.
-                                            </p>
-                                            <span>Features</span>
-                                            <p>
-                                                ▪ Secure Access (OTP)<br>
-                                                ▪ Request Uploads<br>
-                                                ▪ Location Mapping<br>
-                                                ▪ Resource Distribution
-                                            </p>
-                                            <span>Tech Stack</span>
-                                            <p>
-                                                Python, Flask, Bootstrap, Leaflet.js, Firebase
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Project/project6.png" class="rounded" alt="Covid Essentials">
-                                    </figure>
-                                    <span><a href="https://github.com/Tayalarajan7/Covid-Essentials" target="_blank">View Project</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="section animated-row" data-section="slide08">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>TN40 Stores (Ecommerce)</h2>
-                            </div>
-                            <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="about-contentbox">
-                                            <div class="animate" data-animate="fadeInUp">
-                                                <p>
-                                                Tn40 stores helps customer to purchase goods online, it includes several features like<br>
-                                                * Search based on categories<br>
-												* Adding/Removing items to cart<br>
-												* Review before placing the order<br>
-												* Easy registration with mobile number<br> 
-                                                </p>
-                                                <span>Role</span>
-                                                <p>Full stack developer with end-end product development</p>
-                                                <span>Technology</span>
-                                                <p>Node Js, Express Js, RESTful API's, Flutter, Firebase, Git</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                    	<br>
-                                    	<br>
-                                    	<br>
-                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="images/Project/project7.png" class="rounded" alt="TN40 Stores"></figure>
-                                        <span><a href="https://drive.google.com/file/d/13nAnvw-OHN2cp9ASLh_wYwmgnxFbvYpe/view" target="_blank">Download APK</a></span>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section animated-row" data-section="slide09">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                        	<div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Afroza (Social Media)</h2>
-                            </div>
-                            <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="about-contentbox">
-                                            <div class="animate" data-animate="fadeInUp">
-                                                <p>
-                                                * Typical Social media application with features like Like, Comment, Share, Search.<br>* Every users has a profile with some info like Bio, No of Followers, No of Following, Follow, Unfollow.<br>* Users also recieve Posts, Notifications based on action done by other users. 
-                                                </p>
-                                                <span>Role</span>
-                                                <p>Full stack developer with end-end product development</p>
-                                                <span>Technology</span>
-                                                <p>Flutter, RESTful API's, Firebase, Git</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                    	<br>
-                                    	<br>
-                                    	<br>
-                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="images/Project/project8.png" class="rounded" alt="Afroza"></figure>
-                                        <span><a href="https://drive.google.com/file/d/1--bJvS9ByBK-0n1aInTs7NhAYahINQGk/view?usp=sharing" target="_blank">Download APK</a></span>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
             
-            <div class="section animated-row">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                        	<div class="title-block animate" data-animate="fadeInUp">
-                                <h2>FREELANCE WORK - ZARK</h2>
-                            </div>
-                            <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="about-contentbox">
-                                            <div class="animate" data-animate="fadeInUp">
-                                                <p>
-                                                    Co-founded and collaborated with the "Zark" team on multiple successful projects. 
-                                                </p>
-                                                <span>Skills and Achievements</span>
-                                                <p>* Demonstrated proficiency in full- stack web development, client communication, and project management.<br>
-                                                    * Managed timelines, budgets, and resources for on-time project delivery.<br>
-                                                    * Ensured responsive and bug- free web solutions through rigorous testing and quality assurance.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <br>
-                                    	<h5>Notable projects</h5>
-                                    	<br>
-                                        <span style="font-weight: bold;"><a href="https://gallant-noether-90f409.netlify.app" target="_blank">Zark: </a></span>Official website of Zark<br>
-                                        <span style="font-weight: bold;"><a href="https://zealous-archimedes-66c3db.netlify.app" target="_blank">VVStudio: </a></span>Online Salon Appointment<br>
-                                        <span style="font-weight: bold;"><a href="https://blissful-hermann-28ef44.netlify.app/products" target="_blank">Naturepro Spira Farm: </a></span>Selling Spira farm products<br>
-                                        <span style="font-weight: bold;"><a href="https://romantic-thompson-b3c370.netlify.app" target="_blank">Zark Academy: </a></span>Platform for learning
-                                    </div>
+            <!-- Block — Predicting Comfort (Airline) -->
+            <div class="section animated-row" data-section="slide07">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    
+                    <!-- Title + Subtitle -->
+                    <div class="title-block">
+                        <h3 class="project-title">Predicting Comfort (Airline)</h3>
+                        <p class="tag-gradient">Associated with Macquarie University</p>
+                    </div>
+                    
+                    <div class="row align-items-start mt-4">
+                        
+                        <!-- Left: Summary + Role + Tech -->
+                        <div class="col-md-7">
+                        <p class="summary-text">
+                            This project analyzes the Airline Passenger Satisfaction dataset to enhance customer service, boost operational efficiency, and support strategic decision-making.
+                        </p>
+                        
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Role</h6>
+                            <p><strong>Customer Service Improvement:</strong> Identified factors influencing satisfaction and targeted areas like on-board services, check-in, and in-flight amenities.</p>
+                            <p><strong>Passenger Segmentation:</strong> Predicted satisfaction based on data types (e.g., Class, Type of Travel) for tailored improvements.</p>
+                            <p><strong>Predictive Modeling:</strong> Compared models like Logistic Regression, KNN, Neural Networks, and Random Forests to predict satisfaction.</p>
+                        </div>
+                        
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technology</h6>
+                            <div class="tech-tags-left">
+                            <span>Python</span>
+                            <span>Jupyter Notebook</span>
+                            <span>Logistic Regression</span>
+                            <span>KNN</span>
+                            <span>Random Forests</span>
+                            <span>Neural Networks</span>
                             </div>
                         </div>
+                        </div>
+                        
+                        <!-- Right: Image + CTA -->
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project4.jpg" class="rounded img-fluid" alt="Airline Passenger Satisfaction" style="max-width:260px;">
+                        </figure>
+                        <a
+                            href="https://github.com/Tayalarajan7/Kaggle/blob/main/Airline%20Quality%20Ratings/Airline%20Quality%20Ratings.ipynb"
+                            target="_blank"
+                            class="btn-gemini-gradient">
+                            View Project on GitHub
+                        </a>
+                        </div>
+                        
+                    </div>
                     </div>
                 </div>
+                </div>
+            </div>
             </div>
 
-            <div class="section animated-row" data-section="slide07">
+            <!-- Block — Covid Essentials (NGO) -->
+            <div class="section animated-row" data-section="slide08">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    <div class="title-block">
+                        <h3 class="project-title">Covid Essentials (NGO)</h3>
+                        <p class="tag-gradient">Community Support Platform</p>
+                    </div>
+                    <div class="row align-items-start mt-4">
+                        <div class="col-md-7">
+                        <p class="summary-text">Open‑source portal that rapidly mapped urgent medical and supply requests to nearby NGOs and volunteers during the pandemic peak, ensuring timely distribution of critical resources.</p>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Key Features</h6>
+                            <p><strong>OTP‑Secured Access:</strong> One‑tap onboarding for users and volunteers.</p>
+                            <p><strong>Geo‑Mapping Dashboard:</strong> Leaflet.js maps visualising live request and resource locations.</p>
+                            <p><strong>Realtime Coordination:</strong> Dynamic dashboards for NGOs to track fulfilment status.</p>
+                        </div>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technologies Used</h6>
+                            <div class="tech-tags-left"><span>Python</span><span>Flask</span><span>Leaflet.js</span><span>HTML/CSS/JS</span><span>Firebase</span><span>Cloud Firestore</span></div>
+                        </div>
+                        </div>
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project6.png" class="rounded img-fluid" alt="Covid Essentials Screenshot" style="max-width:260px;">
+                        </figure>
+                        <a href="https://github.com/Tayalarajan7/Covid-Essentials" target="_blank" class="btn-gemini-gradient">View on GitHub</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Block — TN40 Stores (E‑commerce) -->
+            <div class="section animated-row" data-section="slide09">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    <div class="title-block">
+                        <h3 class="project-title">TN40 Stores (E‑commerce)</h3>
+                        <p class="tag-gradient">Independent Project</p>
+                    </div>
+                    <div class="row align-items-start mt-4">
+                        <div class="col-md-7">
+                        <p class="summary-text">Tn40 Stores is an online marketplace built for a seamless shopping experience. It features category‑based product search, intuitive cart management, order review before checkout, and quick registration via mobile number. The platform supports 24×7 shopping, free doorstep delivery, and frequently updated offers—perfect for last‑minute purchases and on‑the‑go convenience.</p>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Highlights</h6>
+                            <p><strong>Smart Filters &amp; Search:</strong> Category‑driven discovery of products.</p>
+                            <p><strong>Dynamic Cart &amp; Review:</strong> Adjust items and preview orders pre‑purchase.</p>
+                            <p><strong>Always‑On Service:</strong> 24/7 availability with free doorstep delivery &amp; real‑time offers.</p>
+                        </div>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technologies Used</h6>
+                            <div class="tech-tags-left"><span>Node.js</span><span>Express.js</span><span>Flutter</span><span>Dart</span><span>TypeScript</span><span>REST APIs</span><span>Firebase</span><span>Cloud Firestore</span><span>Google Authentication</span><span>HTML/CSS/JS</span><span>Git</span></div>
+                        </div>
+                        </div>
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project7.png" class="rounded img-fluid" alt="TN40 Stores Screenshot" style="max-width:260px;">
+                        </figure>
+                        <a href="https://drive.google.com/file/d/13nAnvw-OHN2cp9ASLh_wYwmgnxFbvYpe/view" target="_blank" class="btn-gemini-gradient">Download APK</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Block — Afroza (Social Media) -->
+            <div class="section animated-row" data-section="slide10">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    <div class="title-block">
+                        <h3 class="project-title">Afroza (Social Media)</h3>
+                        <p class="tag-gradient">Independent Project</p>
+                    </div>
+                    <div class="row align-items-start mt-4">
+                        <div class="col-md-7">
+                        <p class="summary-text">Developed a mobile‑first social media app with core interactions—Like, Comment, Share, and Search. Every user owns a profile showing bio, follower metrics, and follow/unfollow actions. Push notifications keep users engaged by surfacing interactions in real‑time, providing an immersive community experience.</p>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Key Modules</h6>
+                            <p><strong>User Profiles:</strong> Bio, follower stats, and activity feed.</p>
+                            <p><strong>Realtime Notifications:</strong> Live updates for likes, comments, and follows.</p>
+                            <p><strong>Core Social Actions:</strong> Like, Comment, Share, and global Search functionality.</p>
+                        </div>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technologies Used</h6>
+                            <div class="tech-tags-left"><span>Flutter</span><span>Material Design</span><span>Firebase</span><span>Cloud Firestore</span><span>REST APIs</span><span>Google Authentication</span><span>Git</span></div>
+                        </div>
+                        </div>
+                        <div class="col-md-5 text-center">
+                        <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                            <img src="images/Project/project8.png" class="rounded img-fluid" alt="Afroza Screenshot" style="max-width:260px;">
+                        </figure>
+                        <a href="https://drive.google.com/file/d/1--bJvS9ByBK-0n1aInTs7NhAYahINQGk/view?usp=sharing" target="_blank" class="btn-gemini-gradient">Download APK</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Block — Freelance Work – Zark -->
+            <div class="section animated-row" data-section="slide11">
+            <div class="section-inner">
+                <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 wide-col-laptop">
+                    <div class="glass-container animate" data-animate="fadeInUp">
+                    <div class="title-block">
+                        <h3 class="project-title">Freelance Work – Zark</h3>
+                        <p class="tag-gradient">Co‑founder &amp; Lead Developer</p>
+                    </div>
+                    <div class="row align-items-start mt-4">
+                        <div class="col-md-7">
+                        <p class="summary-text">Partnered with startups to deliver full‑stack web solutions, managing client communication, budgets, and agile development cycles.</p>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Core Skills</h6>
+                            <p><strong>Project Management:</strong> Timeline, budget, and scope ownership.</p>
+                            <p><strong>Quality Assurance:</strong> Rigorous testing for responsive, bug‑free delivery.</p>
+                            <p><strong>Client Success:</strong> Continuous feedback loops &amp; post‑launch support.</p>
+                        </div>
+                        <div class="role-section">
+                            <h6 class="section-heading center-heading">Technologies</h6>
+                            <div class="tech-tags-left"><span>Node.js</span><span>Express.js</span><span>Angular</span><span>React.js</span><span>AWS</span><span>Kubernetes</span><span>Docker</span><span>Jenkins</span><span>REST API's</span><span>Microservices</span><span>Active MQ</span><span>Redis</span><span>OracleDB</span><span>CassandraDB</span><span>Firebase</span><span>HTML/CSS/JS</span></div>
+                        </div>
+                        </div>
+                        <div class="col-md-5 text-center">
+                        <h6 class="section-heading center-heading">Notable Projects</h6>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="https://gallant-noether-90f409.netlify.app" target="_blank" class="btn-gemini-gradient mb-2">Zark – Official Website</a>
+                            <a href="https://zealous-archimedes-66c3db.netlify.app" target="_blank" class="btn-gemini-gradient mb-2">VVStudio – Salon Appointments</a>
+                            <a href="https://blissful-hermann-28ef44.netlify.app/products" target="_blank" class="btn-gemini-gradient mb-2">Naturepro Spira Farm – E-shop</a>
+                            <a href="https://romantic-thompson-b3c370.netlify.app" target="_blank" class="btn-gemini-gradient">Zark Academy – Learning Platform</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="section animated-row" data-section="slide12">
                 <div class="section-inner">
                     <div class="row justify-content-center">
                         <div class="col-md-7 wide-col-laptop">
