@@ -2,458 +2,587 @@
 <html lang="en">
 <head>
   <!-- Essentials only -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tayalarajan – Professional Experience</title>
-  <link rel="shortcut icon" href="images/me.jpeg">
+  <link rel="shortcut icon" href="images/me.jpeg" />
 
-  <!-- External CSS -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="css/fullpage.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/templatemo-style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <!-- External CSS / fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/fullpage.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 
   <style>
-    /* reset and ensure full-page background */
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-    }
+    /* ---------- Global background ---------- */
     body {
       position: relative;
       overflow-x: hidden;
-    }
-    /* gradient overlay */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
       background: linear-gradient(135deg,
-    rgba(30, 30, 60, 1) 0%,
-    rgba(100, 149, 237, 0.9) 35%,
-    rgba(30, 30, 60, 0.8) 65%,
-    rgba(100, 149, 237, 1) 100%);
+        rgba(30, 30, 60, 1) 0%,
+        rgba(100, 149, 237, 0.9) 35%,
+        rgba(30, 30, 60, 0.8) 65%,
+        rgba(100, 149, 237, 1) 100%);
     }
 
-    /* offset for mobile header + hero */
+    /* ---------- Header offset on mobile ---------- */
     @media (max-width: 767px) {
-      #header {
-        height: 70px;
+      #header { height: 70px; }
+      .section-inner { padding-top: 70px; }
+    }
+
+    /* ---------- Hero (slide01) ---------- */
+    .welcome-box .lead { margin-top: 10px; }
+    .welcome-box p { max-width: 600px; margin: 10px auto; color: #aaa; }
+
+    @media (max-width: 767px) {
+      .section-inner.d-flex.align-items-center.justify-content-center {
+        flex-direction: column;
+        padding: 60px 15px !important;
+        min-height: auto !important;
       }
-      .section-inner {
-        padding-top: 70px; /* match header height */
+      .welcome-box { width: 100%; padding: 20px 10px; text-align: center; }
+      .welcome-title { font-size: 32px !important; line-height: 1.3; }
+      .lead { font-size: 20px !important; }
+      .btn-explore { font-size: 14px; padding: 10px 16px; line-height: 2;}
+    }
+
+    /* ---------- Glass card container ---------- */
+    .glass-container {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(31, 38, 135, 0.15);
+      color: #fff;
+    }
+
+    /* ---------- Card titles & badges ---------- */
+    .project-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+    .tag-gradient {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 4px;
+    }
+
+    /* ---------- Text & tag styles ---------- */
+    .summary-text {
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: left;
+    }
+    .role-section {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    .role-section p {
+      margin: 6px 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #fff;
+    }
+    .section-heading {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .tech-tags-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tech-tags-left span {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: transform 0.2s;
+    }
+    .tech-tags-left span:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- Gradient call-to-action buttons ---------- */
+    .btn-gemini-gradient {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #111;
+      background: linear-gradient(to right, #fff, #f3f4f6);
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .btn-gemini-gradient:hover {
+      background: linear-gradient(to right, #f9fafb, #e5e7eb);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      color: #000;
+    }
+
+    /* Remove underline inside glass cards */
+    .glass-container a {
+      text-decoration: none !important;
+    }
+
+    /* Mobile gradient fix */
+    @media (max-width: 767px) {
+      body { background: none; }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: linear-gradient(135deg,
+        rgba(30, 30, 60, 1) 0%,
+        rgba(100, 149, 237, 0.9) 35%,
+        rgba(30, 30, 60, 0.8) 65%,
+        rgba(100, 149, 237, 1) 100%);
       }
+    }
+
+    @media (max-width: 767px) {
+        .section-inner.d-flex.align-items-center.justify-content-center {
+            padding-top: 200px !important;  /* Was 60px */
+        }
     }
   </style>
 </head>
-    
-    <body>
-    
-    <div id="video">
-        <div class="preloader">
-            <div class="preloader-bounce">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+<body>
+  <div id="video">
+    <div class="preloader">
+      <div class="preloader-bounce">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
 
-        <header id="header">
-            <div class="container-fluid">
-                <div class="navbar">
-                    <a href="index.html" id="logo" title="Elegance by TemplateMo">
-                        Tayalarajan
-                    </a>
-                    <div class="navigation-row">
-                        <nav id="navigation">
-                            <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
-                            <div class="nav-box navbar-collapse">
-                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
-                                    <li data-menuanchor="slide01" class="active"><a href="#slide01">Experience</a></li>
-                                    <li data-menuanchor="slide02"><a href="#slide02">Turing</a></li>
-                                    <li data-menuanchor="slide03"><a href="#slide03">Deneka IT</a></li>
-                                    <li data-menuanchor="slide04"><a href="#slide04">SAS</a></li>
-                                    <li data-menuanchor="slide05"><a href="#slide05">Jio</a></li>
-                                    <li data-menuanchor="slide06"><a href="#slide06">Infosys</a></li>
-                                    <li data-menuanchor="slide07"><a href="#slide07">Zoho</a></li>
-                                    <li><a href="projects.html">Projects</a></li>
-                                    <li><a href="certificates.html">Certifications</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        
-
-        <div id="fullpage" class="fullpage-default">
-            <div class="section animated-row" data-section="slide01">
-                <div class="section-inner">
-                    <div class="welcome-box">
-                        <span class="welcome-first animate" data-animate="fadeInUp">Welcome to My</span>
-                        <h1 class="welcome-title animate" data-animate="fadeInUp">Professional Experience</h1>
-                        <p class="animate" data-animate="fadeInUp">
-                            Explore my journey through diverse roles, impactful projects, and innovative solutions.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section animated-row" data-section="slide02">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Turing</h2>
-                                <h3>LLM - Python Engineer (Aug 2024 - Present)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Specializing in advanced fine-tuning and optimization of Large Language Models (LLMs), particularly Google's Gemini model.
-                                            </p>
-                                            <span>Key Responsibilities</span>
-                                            <p>    
-                                                ▪ Spearheaded the advanced fine-tuning of Large Language Models (LLMs), particularly Google's Gemini model, to deliver industry-leading AI capabilities.<br>
-                                                ▪ Conducted <strong>Supervised Fine-Tuning (SFL)</strong> to significantly enhance model accuracy, ensuring exceptional text processing and generation.<br>
-                                                ▪ Designed and implemented <strong>Human Feedback Loop (HFL)</strong> systems to integrate real-time feedback, enabling continuous model learning and improvement.<br>
-                                                ▪ Leveraged <strong>Reinforcement Learning (RL)</strong> to optimize the decision-making processes of AI systems, driving innovation in cutting-edge applications.<br>
-                                            </p>
-                                            <span>Skills</span>
-                                            <p>
-                                                Large Language Models (LLMs), Reinforcement Learning, Supervised fine tuning,Large Language Model Operations (LLMOps)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Experience/turing.png" class="rounded" alt="Airline Passenger Satisfaction">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section animated-row" data-section="slide03">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Deneka IT</h2>
-                                <h3>Security Software Engineer Intern (May 2024 - Nov 2024)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Actively involved in building a comprehensive ERP system integrating CRM, Ticketing, and Marketplace functionalities.
-                                            </p>
-                                            <span>Key Responsibilities</span>
-                                            <p>    
-                                                ▪ Engineered a scalable and comprehensive ERP system that seamlessly integrated CRM, ticketing, and marketplace functionalities to streamline business operations.<br>
-                                                ▪ Led <strong>system architecture design</strong> by collaborating across teams to create robust, scalable foundations for product development.<br>
-                                                ▪ Delivered high-performance <strong>full-stack solutions</strong>, ensuring seamless integration between front-end interfaces and back-end services.<br>
-                                                ▪ Conducted thorough research to identify and integrate cutting-edge technologies, enhancing the platform's efficiency and feature set.<br>
-                                            </p>
-                                            <span>Skills</span>
-                                            <p>
-                                                Snowflake, Data Analysis, React.js, Node.js, Express.js, JSON Web Token (JWT)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Experience/deneka.png" class="rounded" alt="Deneka IT">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section animated-row" data-section="slide04">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>SAS</h2>
-                                <h3>Cloud and Information Services Intern (Nov 2024 - Dec 2024)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Built machine learning models using the SAS Viya platform to leverage big data processing and analytics for business applications.
-                                            </p>
-                                            <span>Key Responsibilities</span>
-                                            <p>    
-                                                ▪ Developed and deployed <strong>machine learning models</strong> using the SAS Viya platform, optimizing performance through Compute Server and CAS Server functionalities.<br>
-                                                ▪ Orchestrated the <strong>processing of large-scale datasets</strong> via CAS Server for efficient big data analysis and decision-making.<br>
-                                                ▪ Explored and implemented advanced data analytics tools to empower businesses with high-speed, data-driven insights.<br>
-                                                ▪ Engaged with industry leaders to discuss evolving trends, challenges, and the role of analytics in modern business.<br>
-                                            </p>
-                                            <span>Skills</span>
-                                            <p>
-                                                SAS (Programming Language), Deep Learning, Machine Learning
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Experience/sas.jpg" class="rounded" alt="SAS">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section animated-row" data-section="slide05">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Jio Platforms Limited</h2>
-                                <h3>Software Development Engineer (Nov 2022 - Jan 2024)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Contributed to the development of Jio Secure ID, a secure digital identity product designed for scalability.
-                                            </p>
-                                            <span>Key Responsibilities</span>
-                                            <p>    
-                                                ▪ Designed and delivered the highly secure <strong>Jio Secure ID</strong> product, enabling robust authentication for millions of users.<br>
-                                                ▪ Architected scalable <strong>microservices</strong> and developed RESTful APIs to support seamless integration and high availability.<br>
-                                                ▪ Optimized infrastructure for <strong>Linux environments</strong>, ensuring reliable and efficient operations.<br>
-                                                ▪ Demonstrated expertise in deploying end-to-end solutions, from development to testing, deployment, and maintenance.<br>
-                                                ▪ Championed Agile practices to deliver innovative and scalable solutions for complex business problems.<br>
-                                            </p>
-                                            <span>Skills</span>
-                                            <p>
-                                                Spring Boot, REST APIs, Microservices, Angular, Redis, DevOps, Cassandra, SQL
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Experience/jio.png" class="rounded" alt="Jio Platforms Limited">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-
-            <div class="section animated-row" data-section="slide06">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Infosys</h2>
-                                <h3>Specialist Programmer (Nov 2020 - Oct 2022)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Developed scalable web applications and APIs using modern development practices.
-                                            </p>
-                                            <span>Key Responsibilities</span>
-                                            <p>    
-                                                ▪ Created dynamic and responsive web applications using <strong>Angular 9</strong>, ensuring a seamless user experience.<br>
-                                                ▪ Developed <strong>RESTful APIs</strong> and backend solutions with Spring Boot, streamlining data flow and application functionality.<br>
-                                                ▪ Enhanced database management with <strong>Hibernate</strong> and <strong>JPA</strong>, optimizing performance for high-traffic applications.<br>
-                                                ▪ Collaborated in <strong>Agile DevOps teams</strong>, ensuring iterative development and faster delivery cycles.<br>
-                                                ▪ Provided mentorship and technical guidance to junior developers, fostering a culture of knowledge-sharing and innovation.<br>
-                                            </p>
-                                            <span>Skills</span>
-                                            <p>
-                                                Spring Boot, REST APIs, Angular, Hibernate, MySQL, Agile
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Experience/infosys.png" class="rounded" alt="Infosys">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-            
-
-            <div class="section animated-row" data-section="slide07">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <h2>Zoho Corporation</h2>
-                                <h3>Summer Intern (Jun 2019)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="about-contentbox">
-                                        <div class="animate" data-animate="fadeInUp">
-                                            <p>
-                                                Developed a robust e-commerce console application in Java with advanced database integration.
-                                            </p>
-                                            <span>Key Responsibilities</span>
-                                            <p>    
-                                                ▪ Developed an <strong>e-commerce console application</strong> in Java with sophisticated <strong>role-based access control</strong> for customers and vendors.<br>
-                                                ▪ Integrated and optimized <strong>MySQL databases</strong> using JDBC to enhance data handling and system performance.<br>
-                                                ▪ Designed efficient backend workflows to ensure smooth functionality and superior user experience.<br>
-                                                ▪ Delivered a robust application by adhering to object-oriented programming principles and industry best practices.<br>
-                                            </p>
-                                            <span>Skills</span>
-                                            <p>
-                                                Java, JDBC, MySQL, Object-Oriented Programming (OOP)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <br><br><br>
-                                    <figure class="about-img animate" data-animate="fadeInUp">
-                                        <img src="images/Experience/zoho.png" class="rounded" alt="Zoho Corporation">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="section animated-row" data-section="slide07">
-                <div class="section-inner">
-                    <div class="row justify-content-center">
-                        <div class="col-md-7 wide-col-laptop">
-                            <div class="title-block animate" data-animate="fadeInUp">
-                                <span>Contact</span>
-                                <h2>Get In Touch!</h2>
-                            </div>
-                            <div class="contact-section">
-                                <div class="row">
-                                    <div class="col-md-6 animate" data-animate="fadeInUp">
-                                        <div class="contact-box">
-                                            <div class="contact-row">
-                                                <i class="fa fa-phone"></i> +61 481 700 945
-                                            </div>
-                                            <div class="contact-row">
-                                                <i class="fa fa-envelope"></i> tayalarajan45@gmail.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 animate" data-animate="fadeInUp">
-                                        <form id="ajax-contact" action="POST" data-netlify="true" role="form">
-                                            <div class="input-field">
-                                                <input type="text" class="form-control" name="name" id="name" required placeholder="Name">
-                                            </div>
-                                            <div class="input-field">
-                                                <input type="email" class="form-control" name="email" id="email" required placeholder="Email">
-                                            </div>
-                                            <div class="input-field">
-                                                <textarea class="form-control" name="message" id="message" required placeholder="Message"></textarea>
-                                            </div>
-                                            <button class="btn" type="submit">Submit</button>
-                                        </form>
-                                        <div id="form-messages" class="mt-3"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="social-icons">
-            <div class="text-right">
-                <ul class="social-icons">
-                    <li>
-                        <a href="https://www.linkedin.com/in/tayala-rajan/" title="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li><a href="https://tayal-ai.netlify.app/" title="Tayal AI" target="_blank"><i class="fas fa-robot"></i></a></li>
-                    <li>
-                        <a href="https://leetcode.com/u/Tayalarajan/" title="LeetCode" target="_blank">
-                            <i class="fas fa-code"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Tayalarajan7" title="GitHub" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.kaggle.com/tayalarajan" title="Kaggle" target="_blank">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 21H5.7V3.1H8.4V21H8.5ZM19 21H16.1L11.8 13.9L16.2 8.4H13.6V5.8H19V8.2L14.8 13.1L19 21Z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/@TechWithTayal" title="YouTube" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
+    <header id="header">
+      <div class="container-fluid">
+        <div class="navbar">
+          <a href="index.html" id="logo" title="Elegance by TemplateMo">Tayalarajan</a>
+          <div class="navigation-row">
+            <nav id="navigation">
+              <button type="button" class="navbar-toggle"><i class="fa fa-bars"></i></button>
+              <div class="nav-box navbar-collapse">
+                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                  <li data-menuanchor="slide01" class="active"><a href="#slide01">Experience</a></li>
+                  <li data-menuanchor="slide02"><a href="#slide02">Turing</a></li>
+                  <li data-menuanchor="slide03"><a href="#slide03">SAS</a></li>
+                  <li data-menuanchor="slide04"><a href="#slide04">Deneka IT</a></li>
+                  <li data-menuanchor="slide05"><a href="#slide05">Jio</a></li>
+                  <li data-menuanchor="slide06"><a href="#slide06">Infosys</a></li>
+                  <li data-menuanchor="slide07"><a href="#slide07">Zoho</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="certificates.html">Certifications</a></li>
                 </ul>
-            </div>
+              </div>
+            </nav>
+          </div>
         </div>
-    </div>  
+      </div>
+    </header>
 
-    <script src="js/jquery.js"></script>
+    <div id="fullpage" class="fullpage-default">
+      <!-- Hero Section -->
+      <div class="section animated-row" data-section="slide01">
+        <div class="section-inner d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+          <div class="welcome-box text-center animate" data-animate="fadeInUp">
+            <span class="welcome-first" style="font-size: 18px; letter-spacing: 2px; color: #aaa;">My Career</span>
+            <h1 class="welcome-title" style="font-size: 52px; font-weight: 800; color: #ffffff; margin-top: 10px;">Professional Experience</h1>
+            <p class="lead" style="font-size: 20px; color: #fff; margin-top: 10px;">A Journey of Innovation & Impact</p>
+            <p style="font-size: 15px; color: #aaa; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+              Explore my diverse roles across AI, cloud computing, and full-stack development, where I’ve driven transformative solutions for global organizations.
+            </p>
+            <div class="mt-4">
+              <a href="#slide02" class="btn btn-explore animate" data-animate="fadeInUp">Discover My Journey</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/bootstrap.min.js"></script>
+      <!-- Turing -->
+      <div class="section animated-row" data-section="slide02">
+        <div class="section-inner">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 wide-col-laptop">
+              <div class="glass-container animate" data-animate="fadeInUp">
+                <div class="title-block">
+                  <h3 class="project-title">Turing</h3>
+                  <p class="tag-gradient">LLM - Python Engineer (Aug 2024 - Present)</p>
+                </div>
+                <div class="row align-items-start mt-4">
+                  <div class="col-md-7">
+                    <p class="summary-text">
+                    Specializing in fine-tuning and optimizing Large Language Models (LLMs), focusing on Google's Gemini to enhance AI capabilities.
+                    </p>
+                    <div class="role-section">
+                    <h6 class="section-heading">Key Contributions</h6>
+                    <p><strong>Advanced Fine-Tuning:</strong> Conducted Supervised Fine-Tuning (SFT) to significantly improve text-generation accuracy and precision.</p>
+                    <p><strong>Human Feedback Integration:</strong> Designed real-time feedback loops (HFL) to enable continuous model learning from expert insights and user interactions.</p>
+                    <p><strong>Reinforcement Learning:</strong> Applied RL techniques to enhance AI decision-making capabilities, driving innovation across multiple use cases.</p>
+                    <p><strong>Model Development:</strong> Played a pivotal role in developing state-of-the-art language models, advancing AI performance within organizational initiatives.</p>
+                    </div>
+                    <div class="role-section">
+                    <h6 class="section-heading">Technologies Used</h6>
+                    <div class="tech-tags-left">
+                        <span>Python</span>
+                        <span>Large Language Models (LLMs)</span>
+                        <span>Fine Tuning</span>
+                        <span>Reinforcement Learning</span>
+                        <span>LLMOps</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                      <img src="images/Experience/turing.png" class="rounded img-fluid" alt="Turing" style="max-width:260px;">
+                    </figure>
+                    <a href="https://www.turing.com/" target="_blank" class="btn-gemini-gradient">Visit Turing</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/fullpage.min.js"></script>
+      <!-- SAS -->
+      <div class="section animated-row" data-section="slide03">
+        <div class="section-inner">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 wide-col-laptop">
+              <div class="glass-container animate" data-animate="fadeInUp">
+                <div class="title-block">
+                  <h3 class="project-title">SAS</h3>
+                  <p class="tag-gradient">Cloud and Information Services Intern (Nov 2024 - Dec 2024)</p>
+                </div>
+                <div class="row align-items-start mt-4">
+                  <div class="col-md-7">
+                    <p class="summary-text">
+                    Developed machine learning models leveraging the SAS Viya platform for big data analytics and informed business decision-making.
+                    </p>
+                    <div class="role-section">
+                    <h6 class="section-heading">Key Contributions</h6>
+                    <p><strong>ML Model Development:</strong> Built efficient models using Compute and CAS servers, optimizing data processing and analysis.</p>
+                    <p><strong>Big Data Analytics:</strong> Managed parallel data processing on the CAS server for handling extensive datasets effectively.</p>
+                    <p><strong>Business Insights:</strong> Explored real-world business applications of analytics, delivering high-speed insights to stakeholders.</p>
+                    <p><strong>Industry Networking:</strong> Engaged industry leaders to discuss emerging trends, challenges, and opportunities in data analytics.</p>
+                    <p><strong>Weekly Presentations:</strong> Enhanced communication skills through regular project updates and stakeholder feedback.</p>
+                    </div>
+                    <div class="role-section">
+                    <h6 class="section-heading">Technologies Used</h6>
+                    <div class="tech-tags-left">
+                        <span>SAS Viya</span>
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>CAS Server</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                      <img src="images/Experience/sas.jpg" class="rounded img-fluid" alt="SAS" style="max-width:260px;">
+                    </figure>
+                    <a href="https://www.sas.com/" target="_blank" class="btn-gemini-gradient">Explore SAS</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/scrolloverflow.js"></script>
+      <!-- Deneka IT -->
+      <div class="section animated-row" data-section="slide04">
+        <div class="section-inner">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 wide-col-laptop">
+              <div class="glass-container animate" data-animate="fadeInUp">
+                <div class="title-block">
+                  <h3 class="project-title">Deneka IT</h3>
+                  <p class="tag-gradient">Security Software Engineer Intern (May 2024 - Nov 2024)</p>
+                </div>
+                <div class="row align-items-start mt-4">
+                  <div class="col-md-7">
+                    <p class="summary-text">
+                    Engineered a comprehensive ERP system integrating CRM, Ticketing, and Marketplace modules for streamlined business processes.
+                    </p>
+                    <div class="role-section">
+                    <h6 class="section-heading">Key Contributions</h6>
+                    <p><strong>System Architecture:</strong> Designed and planned robust, scalable architectures supporting diverse functionalities.</p>
+                    <p><strong>Full-Stack Development:</strong> Delivered seamless front-end and back-end integration, ensuring efficient performance.</p>
+                    <p><strong>Technology Integration:</strong> Researched and implemented innovative technologies to enhance system capabilities and user experience.</p>
+                    <p><strong>International Collaboration:</strong> Improved communication through active collaboration with global development teams, contributing to strategic discussions.</p>
+                    <p><strong>Regular Reporting:</strong> Presented ongoing research findings and feasibility studies, influencing informed decision-making.</p>
+                    </div>
+                    <div class="role-section">
+                    <h6 class="section-heading">Technologies Used</h6>
+                    <div class="tech-tags-left">
+                        <span>Snowflake</span>
+                        <span>Node.js</span>
+                        <span>React.js</span>
+                        <span>Express.js</span>
+                        <span>JWT</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                      <img src="images/Experience/deneka.png" class="rounded img-fluid" alt="Deneka IT" style="max-width:260px;">
+                    </figure>
+                    <a href="https://denekait.com.au/" target="_blank" class="btn-gemini-gradient">Visit Deneka IT</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/owl.carousel.min.js"></script>
+      <!-- Jio Platforms Limited -->
+      <div class="section animated-row" data-section="slide05">
+        <div class="section-inner">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 wide-col-laptop">
+              <div class="glass-container animate" data-animate="fadeInUp">
+                <div class="title-block">
+                  <h3 class="project-title">Jio Platforms Limited</h3>
+                  <p class="tag-gradient">Software Development Engineer (Nov 2022 - Jan 2024)</p>
+                </div>
+                <div class="row align-items-start mt-4">
+                  <div class="col-md-7">
+                    <p class="summary-text">
+                    Delivered scalable software solutions, contributing extensively to the Jio Secure ID project, a high-performance digital identity platform.
+                    </p>
+                    <div class="role-section">
+                    <h6 class="section-heading">Key Contributions</h6>
+                    <p><strong>End-to-End Project Lifecycle:</strong> Led full software development cycles from initial concept through to deployment and maintenance.</p>
+                    <p><strong>Microservices & APIs:</strong> Designed secure, scalable microservices architecture using Spring Boot, Redis, and ActiveMQ.</p>
+                    <p><strong>Infrastructure Optimization:</strong> Managed robust Linux environments ensuring stability and scalability.</p>
+                    <p><strong>Front-End & Back-End Expertise:</strong> Delivered cohesive integration of front-end interfaces with backend services.</p>
+                    <p><strong>Scalable System Design:</strong> Developed systems capable of supporting millions of users, focusing on performance and reliability.</p>
+                    </div>
+                    <div class="role-section">
+                    <h6 class="section-heading">Technologies Used</h6>
+                    <div class="tech-tags-left">
+                        <span>Spring Boot</span>
+                        <span>Angular</span>
+                        <span>REST APIs</span>
+                        <span>Redis</span>
+                        <span>Cassandra</span>
+                        <span>SQL</span>
+                        <span>DevOps</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                      <img src="images/Experience/jio.png" class="rounded img-fluid" alt="Jio Platforms Limited" style="max-width:260px;">
+                    </figure>
+                    <a href="https://secureid.jio.com/" target="_blank" class="btn-gemini-gradient">View Jio Secure ID</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/jquery.inview.min.js"></script>
+      <!-- Infosys -->
+      <div class="section animated-row" data-section="slide06">
+        <div class="section-inner">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 wide-col-laptop">
+              <div class="glass-container animate" data-animate="fadeInUp">
+                <div class="title-block">
+                  <h3 class="project-title">Infosys</h3>
+                  <p class="tag-gradient">Specialist Programmer (Nov 2020 - Oct 2022)</p>
+                </div>
+                <div class="row align-items-start mt-4">
+                  <div class="col-md-7">
+                    <p class="summary-text">
+                    Collaborated in agile teams to deliver sophisticated web applications and APIs, enhancing system responsiveness and user experience.
+                    </p>
+                    <div class="role-section">
+                    <h6 class="section-heading">Key Contributions</h6>
+                    <p><strong>Application Development:</strong> Developed robust web solutions using MVC architecture and Spring Boot.</p>
+                    <p><strong>RESTful Web Services:</strong> Implemented comprehensive APIs ensuring efficient data handling and business logic integration.</p>
+                    <p><strong>Database Optimization:</strong> Managed efficient database interactions utilizing Hibernate and JPA frameworks.</p>
+                    <p><strong>Responsive UI:</strong> Created interactive and responsive front-end interfaces using Angular.</p>
+                    <p><strong>Agile & DevOps Practices:</strong> Enhanced productivity through collaborative methodologies and streamlined development processes.</p>
+                    </div>
+                    <div class="role-section">
+                    <h6 class="section-heading">Technologies Used</h6>
+                    <div class="tech-tags-left">
+                        <span>Spring Boot</span>
+                        <span>Angular</span>
+                        <span>REST APIs</span>
+                        <span>Hibernate</span>
+                        <span>MySQL</span>
+                        <span>Git</span>
+                        <span>JIRA</span>
+                        <span>Maven</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                      <img src="images/Experience/infosys.png" class="rounded img-fluid" alt="Infosys" style="max-width:260px;">
+                    </figure>
+                    <a href="https://www.infosys.com/" target="_blank" class="btn-gemini-gradient">Visit Infosys</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/form.js"></script>
+      <!-- Zoho Corporation -->
+      <div class="section animated-row" data-section="slide07">
+        <div class="section-inner">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 wide-col-laptop">
+              <div class="glass-container animate" data-animate="fadeInUp">
+                <div class="title-block">
+                  <h3 class="project-title">Zoho Corporation</h3>
+                  <p class="tag-gradient">Summer Intern (Jun 2019)</p>
+                </div>
+                <div class="row align-items-start mt-4">
+                  <div class="col-md-7">
+                    <p class="summary-text">
+                    Developed a feature-rich e-commerce console application in Java, ensuring efficient role-based management and database performance.
+                    </p>
+                    <div class="role-section">
+                    <h6 class="section-heading">Key Contributions</h6>
+                    <p><strong>E-Commerce Development:</strong> Built sophisticated console-based solutions supporting multiple user roles.</p>
+                    <p><strong>Database Integration:</strong> Ensured smooth MySQL database operations via JDBC, optimizing data interactions.</p>
+                    <p><strong>Performance Enhancement:</strong> Improved backend performance, delivering robust and responsive application experiences.</p>
+                    <p><strong>Role-Based Functionality:</strong> Integrated advanced access controls tailored to different user roles.</p>
+                    </div>
+                    <div class="role-section">
+                    <h6 class="section-heading">Technologies Used</h6>
+                    <div class="tech-tags-left">
+                        <span>Java</span>
+                        <span>JDBC</span>
+                        <span>MySQL</span>
+                        <span>OOP</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 text-center">
+                    <figure class="about-img animate" data-animate="fadeInUp" style="margin-bottom:15px;">
+                      <img src="images/Experience/zoho.png" class="rounded img-fluid" alt="Zoho Corporation" style="max-width:260px;">
+                    </figure>
+                    <a href="https://www.zoho.com/" target="_blank" class="btn-gemini-gradient">Explore Zoho</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/custom.js"></script>
+      <!-- Contact Section -->
+      <div class="section animated-row" data-section="slide08">
+        <div class="section-inner">
+          <div class="row justify-content-center">
+            <div class="col-md-7 wide-col-laptop">
+              <div class="title-block animate" data-animate="fadeInUp">
+                <span>Contact</span>
+                <h2>Get In Touch!</h2>
+              </div>
+              <div class="contact-section">
+                <div class="row">
+                  <div class="col-md-6 animate" data-animate="fadeInUp">
+                    <div class="contact-box">
+                      <div class="contact-row">
+                        <i class="fa fa-phone"></i> +61 481 700 945
+                      </div>
+                      <div class="contact-row">
+                        <i class="fa fa-envelope"></i> tayalarajan45@gmail.com
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 animate" data-animate="fadeInUp">
+                    <form id="ajax-contact" action="POST" data-netlify="true" role="form">
+                      <div class="input-field">
+                        <input type="text" class="form-control" name="name" id="name" required placeholder="Name">
+                      </div>
+                      <div class="input-field">
+                        <input type="email" class="form-control" name="email" id="email" required placeholder="Email">
+                      </div>
+                      <div class="input-field">
+                        <textarea class="form-control" name="message" id="message" required placeholder="Message"></textarea>
+                      </div>
+                      <button class="btn" type="submit">Submit</button>
+                    </form>
+                    <div id="form-messages" class="mt-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div id="social-icons">
+      <div class="text-right">
+        <ul class="social-icons">
+          <li><a href="https://www.linkedin.com/in/tayala-rajan/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://tayal-ai.netlify.app/" title="Tayal AI" target="_blank"><i class="fas fa-robot"></i></a></li>
+          <li><a href="https://leetcode.com/u/Tayalarajan/" title="LeetCode" target="_blank"><i class="fas fa-code"></i></a></li>
+          <li><a href="https://github.com/Tayalarajan7" title="GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.kaggle.com/tayalarajan" title="Kaggle" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.5 21H5.7V3.1H8.4V21H8.5ZM19 21H16.1L11.8 13.9L16.2 8.4H13.6V5.8H19V8.2L14.8 13.1L19 21Z" fill="currentColor"/>
+            </svg>
+          </a></li>
+          <li><a href="https://www.youtube.com/@TechWithTayal" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  </body>
+  <!-- Scripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/fullpage.min.js"></script>
+  <script src="js/scrolloverflow.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/custom.js"></script>
+</body>
 </html>
