@@ -163,7 +163,6 @@
                 scrollOverflow: true,
                 responsiveWidth: 768,
                 responsiveHeight: 600,
-                responsiveSlides: true
             });
         }
         $(document).on('click', '.navbar-toggle', function() {
