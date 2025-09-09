@@ -314,6 +314,68 @@ https://templatemo.com/tm-528-elegance
             }
         }
 
+        /* === SOCIAL ICONS POSITION === */
+        #social-icons {
+        position: fixed;
+        top: 50%;
+        right: 2px; /* Super close to the edge */
+        transform: translateY(-50%);
+        z-index: 3000;
+        pointer-events: auto;
+        }
+
+        #social-icons .social-icons {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        }
+
+        #social-icons .social-icons li {
+        margin: 2px 0;
+        }
+
+        #social-icons .social-icons li a {
+        width: 44px; /* Slimmer size for compact look */
+        height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        font-size: 18px;
+        border-radius: 6px;
+        text-decoration: none;
+
+        /* Thinner border */
+        box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.1) inset;
+
+        transition: background 0.15s ease, transform 0.15s ease;
+        }
+
+        #social-icons .social-icons li a:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateX(-2px);
+        box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.25) inset; /* Slightly brighter on hover */
+        }
+
+        /* === MOBILE VIEW === */
+        @media (max-width: 767px) {
+        #social-icons {
+            right: 1px; /* Almost flush with edge */
+        }
+
+        #social-icons .social-icons li a {
+            width: 28px;  /* Smaller for mobile */
+            height: 36px;
+            font-size: 15px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.55);
+
+            /* Even thinner border for mobile */
+            box-shadow: 0 0 0 0.4px rgba(255, 255, 255, 0.1) inset;
+        }
+        }
+
 	</style>
 
     </head>
@@ -885,6 +947,25 @@ https://templatemo.com/tm-528-elegance
             Being Me Section -->
         </div>
     </div>  
+
+    <!-- Social Icons -->
+    <div id="social-icons" aria-label="Social links">
+        <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/in/tayala-rajan/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+            <li><a href="https://tayal-ai.netlify.app/" title="Tayal AI" target="_blank" rel="noopener"><i class="fas fa-robot" aria-hidden="true"></i></a></li>
+            <li><a href="https://leetcode.com/u/Tayalarajan/" title="LeetCode" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/Tayalarajan7" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+            <li>
+            <a href="https://www.kaggle.com/tayalarajan" title="Kaggle" target="_blank" rel="noopener" aria-label="Kaggle">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8.5 21H5.7V3.1H8.4V21H8.5ZM19 21H16.1L11.8 13.9L16.2 8.4H13.6V5.8H19V8.2L14.8 13.1L19 21Z" fill="currentColor"/>
+                </svg>
+            </a>
+            </li>
+            <li><a href="https://www.youtube.com/@TechWithTayal" title="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
 
     <script src="js/jquery.js"></script>
 
