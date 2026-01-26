@@ -107,6 +107,7 @@
       text-align: center;
     }
 
+    /* Tags kept in CSS in case needed elsewhere, but not used in layout now */
     .tech-tags-left {
       display: flex;
       flex-wrap: wrap;
@@ -216,7 +217,7 @@
             <h1 class="welcome-title" style="font-size: 52px; font-weight: 800; color: #ffffff; margin-top: 10px;">Professional Experience</h1>
             <p class="lead" style="font-size: 20px; color: #fff; margin-top: 10px;">A Journey of Innovation & Impact</p>
             <p style="font-size: 15px; color: #aaa; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
-              Explore my diverse roles across AI, cloud computing, and full-stack development, where I’ve driven transformative solutions for global organizations.
+              Explore my diverse roles across AI, cloud computing, and full-stack development, where I have driven transformative solutions for global organizations.
             </p>
             <div class="mt-4">
               <a href="#slide02" class="btn btn-explore animate" data-animate="fadeInUp">Discover My Journey</a>
@@ -233,37 +234,21 @@
               <div class="glass-container animate" data-animate="fadeInUp">
                 <div class="title-block">
                   <h3 class="project-title">Cancer Institute NSW</h3>
-                  <p class="tag-gradient">Data Scientist Intern (Jul 2025 - Present)</p>
+                  <p class="tag-gradient">Data Scientist Intern (Jul 2025 - Nov 2025)</p>
                 </div>
 
                 <div class="row align-items-start mt-4">
                   <!-- Left Column -->
                   <div class="col-md-7">
                     <p class="summary-text">
-                      Building a privacy-compliant, domain-specific AI system to advance cancer research and improve healthcare decision-making at Cancer Institute NSW.
+                      Delivered a privacy-preserving, on-prem AI Knowledge Assistant that transforms how clinicians and policy teams discover answers across internal PDFs, policies, web pages, and spreadsheets without relying on any external APIs.
                     </p>
 
                     <div class="role-section">
                       <h6 class="section-heading">Key Contributions</h6>
-                      <p><strong>SLM Development:</strong> Fine-tuning a Small Language Model for cancer-specific Q&A and research insights.</p>
-                      <p><strong>Knowledge Graph:</strong> Designed a comprehensive KG capturing cancer entities, treatments, risk factors, and outcomes.</p>
-                      <p><strong>RAG Integration:</strong> Implemented Retrieval-Augmented Generation for context-aware, accurate answers.</p>
-                      <p><strong>Data Utilization:</strong> Leveraging CINSW datasets and external cancer statistics for model domain adaptation.</p>
-                    </div>
-
-                    <div class="role-section">
-                      <h6 class="section-heading">Technologies Used</h6>
-                      <div class="tech-tags-left">
-                        <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>NetworkX</span>
-                        <span>Hugging Face</span>
-                        <span>Knowledge Graphs</span>
-                        <span>RAG</span>
-                        <span>Fine-Tuning</span>
-                        <span>Data Pipeline</span>
-                        <span>SLM</span>
-                      </div>
+                      <p>
+                        At Cancer Institute NSW, I built a hybrid Retrieval-Augmented Generation system combining FAISS vector search with an ontology-driven Knowledge Graph to reduce ambiguity and improve explainability in cancer-related answers. I orchestrated multi-step queries using LangChain and LangGraph to plan retrieval, knowledge graph lookups, and summarisation, enforcing groundedness checks and safe fallbacks with consistent citations. I also operationalised evaluation and observability using RAGAS and LangSmith/OpenTelemetry, and deployed the stack fully on-prem with Docker, Kubernetes, and Terraform, enabling reproducible releases, scalable inference, and healthcare-grade governance.
+                      </p>
                     </div>
                   </div>
 
@@ -281,7 +266,6 @@
         </div>
       </div>
 
-
       <!-- AirLabOne -->
       <div class="section animated-row" data-section="slide03">
         <div class="section-inner">
@@ -290,35 +274,21 @@
               <div class="glass-container animate" data-animate="fadeInUp">
                 <div class="title-block">
                   <h3 class="project-title">AirLabOne</h3>
-                  <p class="tag-gradient">Digital Twin – ML Engineer (Patented)</p>
+                  <p class="tag-gradient">Machine Learning Engineer – Digital Twin (Jun 2025 - Jul 2025)</p>
                 </div>
 
                 <div class="row align-items-start mt-4">
                   <!-- Left Column -->
                   <div class="col-md-7">
                     <p class="summary-text">
-                      Worked on a patented digital twin platform connecting high-value lab equipment to the cloud for real-time access, predictive insights, and secure collaboration across healthcare and research teams.
+                      Contributed to a patented Digital Twin platform that turns high-value lab equipment into a secure, real-time cloud of lab hardware for remote access, rental, and collaboration.
                     </p>
 
                     <div class="role-section">
                       <h6 class="section-heading">Key Contributions</h6>
-                      <p><strong>Digital Twin:</strong> Designed and implemented cloud-based digital twins for lab hardware.</p>
-                      <p><strong>Predictive Insights:</strong> Developed analytics to forecast device health and utilization.</p>
-                      <p><strong>Compliance & Security:</strong> Built secure ingestion pipelines with encryption and immutable audit logs.</p>
-                      <p><strong>Cloud Video Streaming:</strong> Engineered AWS-based live device streaming and monitoring.</p>
-                    </div>
-
-                    <div class="role-section">
-                      <h6 class="section-heading">Tech Stack</h6>
-                      <div class="tech-tags-left">
-                        <span>AWS</span>
-                        <span>NVIDIA Jetson</span>
-                        <span>Python</span>
-                        <span>Node.js</span>
-                        <span>React.js</span>
-                        <span>REST APIs</span>
-                        <span>Firebase</span>
-                      </div>
+                      <p>
+                        At AirLabOne, I built high-frequency sensor telemetry ingestion for lab devices using AWS IoT Core and Kinesis, landing per-second multi-sensor streams into S3 and curating traceable datasets with AWS Glue and the Glue Data Catalog. I implemented lakehouse-style analytics to investigate device health and compliance signals using Athena and Redshift for operational dashboards and reporting. I deployed the Digital Twin application and anomaly-detection services on AWS with Docker and EKS, codified infrastructure with Terraform, and used MLflow, EventBridge, Lambda, and SNS to monitor model performance, automate retraining, and maintain strong audit trails aligned with healthcare compliance expectations.
+                      </p>
                     </div>
                   </div>
 
@@ -344,30 +314,18 @@
               <div class="glass-container animate" data-animate="fadeInUp">
                 <div class="title-block">
                   <h3 class="project-title">Turing</h3>
-                  <p class="tag-gradient">LLM - Python Engineer (Aug 2024 - May 2025)</p>
+                  <p class="tag-gradient">LLM - Python Engineer (Aug 2024 - Aug 2025)</p>
                 </div>
                 <div class="row align-items-start mt-4">
                   <div class="col-md-7">
                     <p class="summary-text">
-                    Specializing in fine-tuning and optimizing Large Language Models (LLMs), focusing on Google's Gemini to enhance AI capabilities.
+                      Specialised in fine-tuning and evaluating Large Language Models, focusing on Google Gemini to improve reasoning quality, instruction adherence, and agentic behaviour.
                     </p>
                     <div class="role-section">
-                    <h6 class="section-heading">Key Contributions</h6>
-                    <p><strong>Advanced Fine-Tuning:</strong> Conducted Supervised Fine-Tuning (SFT) to significantly improve text-generation accuracy and precision.</p>
-                    <p><strong>Human Feedback Integration:</strong> Designed real-time feedback loops (HFL) to enable continuous model learning from expert insights and user interactions.</p>
-                    <p><strong>Reinforcement Learning:</strong> Applied RL techniques to enhance AI decision-making capabilities, driving innovation across multiple use cases.</p>
-                    <p><strong>Model Development:</strong> Played a pivotal role in developing state-of-the-art language models, advancing AI performance within organizational initiatives.</p>
-                    </div>
-                    <div class="role-section">
-                    <h6 class="section-heading">Technologies Used</h6>
-                    <div class="tech-tags-left">
-                        <span>Python</span>
-                        <span>Large Language Models (LLMs)</span>
-                        <span>Fine Tuning</span>
-                        <span>Reinforcement Learning</span>
-                        <span>Docker</span>
-                        <span>LLMOps</span>
-                    </div>
+                      <h6 class="section-heading">Key Contributions</h6>
+                      <p>
+                        At Turing, I evaluated Google Gemini using supervised fine-tuning and human-feedback-driven reinforcement learning workflows to measure prompt accuracy, reasoning depth, and safety. I fed these insights into training decisions to iteratively refine datasets and model behaviour, and built automated quality gates that validated formatting and policy criteria at scale, significantly reducing manual review effort. I engineered a high-throughput AWS data pipeline using S3, Glue, Spark, Athena, Redshift, and dbt to ingest, validate, and query fifteen to twenty thousand supervised fine-tuning samples per day across distributed contributors. The full evaluation and automation stack was containerised with Docker, enabling reproducible runs and scalable execution across engineering teams.
+                      </p>
                     </div>
                   </div>
                   <div class="col-md-5 text-center">
@@ -396,28 +354,13 @@
                 <div class="row align-items-start mt-4">
                   <div class="col-md-7">
                     <p class="summary-text">
-                    Developed machine learning models leveraging the SAS Viya platform for big data analytics and informed business decision-making.
+                      Developed and evaluated machine learning models on the SAS Viya platform to demonstrate big data analytics and high-speed decision support.
                     </p>
                     <div class="role-section">
-                    <h6 class="section-heading">Key Contributions</h6>
-                    <p><strong>ML Model Development:</strong> Built efficient models using Compute and CAS servers, optimizing data processing and analysis.</p>
-                    <p><strong>Big Data Analytics:</strong> Managed parallel data processing on the CAS server for handling extensive datasets effectively.</p>
-                    <p><strong>Business Insights:</strong> Explored real-world business applications of analytics, delivering high-speed insights to stakeholders.</p>
-                    <p><strong>Industry Networking:</strong> Engaged industry leaders to discuss emerging trends, challenges, and opportunities in data analytics.</p>
-                    <p><strong>Weekly Presentations:</strong> Enhanced communication skills through regular project updates and stakeholder feedback.</p>
-                    </div>
-                    <div class="role-section">
-                    <h6 class="section-heading">Technologies Used</h6>
-                    <div class="tech-tags-left">
-                        <span>Big Data</span>
-                        <span>SAS Viya</span>
-                        <span>SAS Programming</span>
-                        <span>Data Analysis</span>
-                        <span>Data Visualization</span>
-                        <span>Machine Learning</span>
-                        <span>Deep Learning</span>
-                        <span>CAS Server</span>
-                    </div>
+                      <h6 class="section-heading">Key Contributions</h6>
+                      <p>
+                        At SAS, I built machine learning workflows using SAS Viya, leveraging the Compute Server for execution and the CAS Server for in-memory, parallel processing over large datasets. I used CAS to accelerate feature engineering, training, and validation, and produced visual insights with SAS Visual Analytics to support business stakeholders. I presented weekly progress updates to technical and non-technical audiences, incorporated feedback to refine models and dashboards, and gained exposure to how large enterprises use big data and analytics to drive operational and strategic decisions.
+                      </p>
                     </div>
                   </div>
                   <div class="col-md-5 text-center">
@@ -446,26 +389,13 @@
                 <div class="row align-items-start mt-4">
                   <div class="col-md-7">
                     <p class="summary-text">
-                    Engineered a comprehensive ERP system integrating CRM, Ticketing, and Marketplace modules for streamlined business processes.
+                      Helped engineer an ERP and CRM data platform that unified security, multi-tenant onboarding, and analytics across customer and technician workflows.
                     </p>
                     <div class="role-section">
-                    <h6 class="section-heading">Key Contributions</h6>
-                    <p><strong>System Architecture:</strong> Designed and planned robust, scalable architectures supporting diverse functionalities.</p>
-                    <p><strong>Full-Stack Development:</strong> Delivered seamless front-end and back-end integration, ensuring efficient performance.</p>
-                    <p><strong>Technology Integration:</strong> Researched and implemented innovative technologies to enhance system capabilities and user experience.</p>
-                    <p><strong>International Collaboration:</strong> Improved communication through active collaboration with global development teams, contributing to strategic discussions.</p>
-                    <p><strong>Regular Reporting:</strong> Presented ongoing research findings and feasibility studies, influencing informed decision-making.</p>
-                    </div>
-                    <div class="role-section">
-                    <h6 class="section-heading">Technologies Used</h6>
-                    <div class="tech-tags-left">
-                        <span>Snowflake</span>
-                        <span>Node.js</span>
-                        <span>React.js</span>
-                        <span>Next.js</span>
-                        <span>Express.js</span>
-                        <span>JWT</span>
-                    </div>
+                      <h6 class="section-heading">Key Contributions</h6>
+                      <p>
+                        At Deneka IT, I built an ERP and CRM platform with multi-tenant onboarding and role-based access, implementing secure authentication and authorisation through JWT-based single sign-on and RBAC across services. I integrated CRM contact pipelines with Google Contacts and Microsoft Outlook, using Snowflake as the central data hub to consolidate and standardise customer activity data. I implemented data quality and synchronisation logic to handle deduplication, conflict resolution, and incremental updates so records stayed consistent across systems, and delivered analytics-ready datasets and operational reports from Snowflake to support engagement, onboarding, and productivity insights. I packaged APIs and services with Node.js and Express, following CI/CD practices to keep deployments reliable and maintainable.
+                      </p>
                     </div>
                   </div>
                   <div class="col-md-5 text-center">
@@ -494,21 +424,13 @@
                 <div class="row align-items-start mt-4">
                   <div class="col-md-7">
                     <p class="summary-text">
-                    Delivered scalable software solutions, contributing extensively to the Jio Secure ID project, a high-performance digital identity platform.
+                      Built and operated core modules of Jio SecureID, a multi-tenant digital identity and MFA platform serving enterprise clients at massive scale.
                     </p>
                     <div class="role-section">
-                    <h6 class="section-heading">Key Contributions</h6>
-                    <p><strong>End-to-End Project Lifecycle:</strong> Led full software development cycles from initial concept through to deployment and maintenance.</p>
-                    <p><strong>Microservices & APIs:</strong> Designed secure, scalable microservices architecture using Spring Boot, Redis, and ActiveMQ.</p>
-                    <p><strong>Infrastructure Optimization:</strong> Managed robust Linux environments ensuring stability and scalability.</p>
-                    <p><strong>Front-End & Back-End Expertise:</strong> Delivered cohesive integration of front-end interfaces with backend services.</p>
-                    <p><strong>Scalable System Design:</strong> Developed systems capable of supporting millions of users, focusing on performance and reliability.</p>
-                    </div>
-                    <div class="role-section">
-                    <h6 class="section-heading">Technologies Used</h6>
-                    <div class="tech-tags-left">
-                        <span>Java</span><span>Spring Boot</span><span>Angular 9</span><span>AWS</span><span>EC2</span><span>EKS</span><span>REST APIs</span><span>Microservices</span><span>Redis</span><span>Kafka</span><span>Kubernetes</span><span>Docker</span><span>Jenkins</span><span>OracleDB</span><span>CassandraDB</span><span>DataDog</span><span>Terraform</span><span>Jfrog</span>
-                    </div>
+                      <h6 class="section-heading">Key Contributions</h6>
+                      <p>
+                        At Jio, I engineered Java and Spring Boot microservices and REST APIs that powered secure authentication for Jio SecureID, focusing on low-latency responses and reliability under high concurrency. I implemented secure client onboarding using mutual TLS, API key exchange, and API Gateway allowlists so only approved systems could call authentication endpoints. I designed event and telemetry flows to feed audit trails, operational analytics, and security monitoring, and delivered production deployments by containerising services with Docker, running them on Kubernetes, and provisioning infrastructure with Terraform. I used Prometheus and Datadog to monitor latency, error rates, throughput, and client activity, and worked within agile teams to refine system design, enforce strong security practices, and improve resilience over time.
+                      </p>
                     </div>
                   </div>
                   <div class="col-md-5 text-center">
@@ -537,39 +459,13 @@
                 <div class="row align-items-start mt-4">
                   <div class="col-md-7">
                     <p class="summary-text">
-                    Collaborated in agile teams to deliver sophisticated web applications and APIs, enhancing system responsiveness and user experience.
+                      Helped build and enhance AutoData, a full-stack asset platform for managing vehicle and compliance data across an automotive client’s operations.
                     </p>
                     <div class="role-section">
-                    <h6 class="section-heading">Key Contributions</h6>
-                    <p><strong>Application Development:</strong> Developed robust web solutions using MVC architecture and Spring Boot.</p>
-                    <p><strong>RESTful Web Services:</strong> Implemented comprehensive APIs ensuring efficient data handling and business logic integration.</p>
-                    <p><strong>Database Optimization:</strong> Managed efficient database interactions utilizing Hibernate and JPA frameworks.</p>
-                    <p><strong>Responsive UI:</strong> Created interactive and responsive front-end interfaces using Angular.</p>
-                    <p><strong>Agile & DevOps Practices:</strong> Enhanced productivity through collaborative methodologies and streamlined development processes.</p>
-                    </div>
-                    <div class="role-section">
-                    <h6 class="section-heading">Technologies Used</h6>
-                    <div class="tech-tags-left">
-                        <span>Spring Boot</span>
-                        <span>Angular</span>
-                        <span>Java</span>
-                        <span>Junit</span>
-                        <span>JPA</span>
-                        <span>Log4j</span>
-                        <span>Hibernate</span>
-                        <span>AWS</span>
-                        <span>EC2</span>
-                        <span>EKS</span>
-                        <span>REST APIs</span>
-                        <span>Microservices</span>
-                        <span>Redis</span>
-                        <span>Kafka</span>
-                        <span>MySQL</span>
-                        <span>Git</span>
-                        <span>JIRA</span>
-                        <span>Docker</span>
-                        <span>Kubernetes</span>
-                    </div>
+                      <h6 class="section-heading">Key Contributions</h6>
+                      <p>
+                        At Infosys, I worked on AutoData, delivering end-to-end workflows from ingestion to operational UI using Java, Spring Boot, microservices, REST APIs, and React. I implemented persistence and performance layers on Oracle DB with JPA and Hibernate, improved responsiveness using Redis caching, and integrated event-driven flows with Kafka across services. I later extended the solution with scalable data engineering pipelines on AWS using S3, Kinesis, Glue, Athena, and Redshift so high-volume vehicle and policy data could be transformed and queried for analytics. I strengthened production readiness with JUnit test suites, hardened microservice contracts, and automated deployments on Docker and Kubernetes, using CloudFormation or Terraform plus Prometheus and Datadog to monitor health, performance, and reliability.
+                      </p>
                     </div>
                   </div>
                   <div class="col-md-5 text-center">
@@ -598,28 +494,13 @@
                 <div class="row align-items-start mt-4">
                   <div class="col-md-7">
                     <p class="summary-text">
-                    Developed a feature-rich e-commerce console application in Java, ensuring efficient role-based management and database performance.
+                      Built a Java-based e-commerce console application with clear role separation and efficient database interactions during an intensive summer internship.
                     </p>
                     <div class="role-section">
-                    <h6 class="section-heading">Key Contributions</h6>
-                    <p><strong>E-Commerce Development:</strong> Built sophisticated console-based solutions supporting multiple user roles.</p>
-                    <p><strong>Database Integration:</strong> Ensured smooth MySQL database operations via JDBC, optimizing data interactions.</p>
-                    <p><strong>Performance Enhancement:</strong> Improved backend performance, delivering robust and responsive application experiences.</p>
-                    <p><strong>Role-Based Functionality:</strong> Integrated advanced access controls tailored to different user roles.</p>
-                    </div>
-                    <div class="role-section">
-                    <h6 class="section-heading">Technologies Used</h6>
-                    <div class="tech-tags-left">
-                        <span>Java</span>
-                        <span>OOP</span>
-                        <span>Design Patterns</span>
-                        <span>Junit</span>
-                        <span>JPA</span>
-                        <span>Log4j</span>
-                        <span>Hibernate</span>
-                        <span>JDBC</span>
-                        <span>MySQL</span>
-                    </div>
+                      <h6 class="section-heading">Key Contributions</h6>
+                      <p>
+                        At Zoho, I developed a feature-rich console application implementing core e-commerce workflows for customers, vendors, and premium users using Java and clean object-oriented design. I integrated MySQL via JDBC for reliable persistence and queries, applied role-based access controls to separate user capabilities, and focused on performance and maintainability through modular design and straightforward logging and error-handling practices. This experience grounded my understanding of back-end design patterns and database-driven application development.
+                      </p>
                     </div>
                   </div>
                   <div class="col-md-5 text-center">
