@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Passioned by technologies fueled by peace - Tayalarajan">
     <meta name="author" content="Tayalarajan">
-    <meta name="keywords" content="Tayalarajan,Tayalarajan45, Tayalarajan Portfolio,Tayal,tayalarajan,tayalarajan45, tayalarajan portfolio,tayal,portfolio,developer,eportfolio,my portfolio,portfolio website,a portfolio website,portfoliobox,ui developer,developer mode,developer website,developer linkedin,portfolio builder,portfolio app,portfolio resume,developer account,developer resume,developer blog,developer images,developer definition,developer experience,developer dashboard,portfolio about me,portfolio link,portfolio url,developer background,developer hub,developer name,developer near me,developer work,my portfolio design,developer profile,developer life,developer role,software professional,e portfolio websites,my portfolio app,my portfolio website,portfolio 21>
+    <meta name="keywords" content="Tayalarajan,Tayalarajan45, Tayalarajan Portfolio,Tayal,tayalarajan,tayalarajan45, tayalarajan portfolio,tayal,portfolio,developer,eportfolio,my portfolio,portfolio website,a portfolio website,portfoliobox,ui developer,developer mode,developer website,developer linkedin,portfolio builder,portfolio app,portfolio resume,developer account,developer resume,developer blog,developer images,developer definition,developer experience,developer dashboard,portfolio about me,portfolio link,portfolio url,developer background,developer hub,developer name,developer near me,developer work,my portfolio design,developer profile,developer life,developer role,software professional,e portfolio websites,my portfolio app,my portfolio website,portfolio 21">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
     <title>Tayalarajan - Portfolio</title>
@@ -376,6 +376,241 @@ https://templatemo.com/tm-528-elegance
         }
         }
 
+        /* ===== Experience Grid (single slide, space-optimised) ===== */
+        .exp6-wrap { padding-top: 6px; }
+
+        .exp6-grid {
+            max-width: 1100px;
+            margin: 18px auto 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        /* Card look aligned with your page */
+        .exp6-card {
+        background: rgba(255, 255, 255, 0.035);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        border-radius: 18px;
+        padding: 16px 18px;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+        min-height: 160px;
+
+        display: grid;
+        grid-template-columns: 96px 1fr; /* more space for logo */
+        column-gap: 16px;
+        align-items: center;
+        }
+
+                /* BIG logo – no box */
+        .exp6-logo {
+        width: 92px;
+        height: 92px;
+
+        object-fit: contain;
+
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+
+        /* strong visibility */
+        filter: brightness(1.2) contrast(1.35) saturate(1.25);
+
+        /* slight emphasis */
+        transform: scale(1.05);
+        }
+
+        .exp6-content {
+            text-align: center;
+        }
+
+        .exp6-title {
+            margin: 0;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .exp6-company {
+            margin: 4px 0 0 0;
+            color: #d9d9d9;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .exp6-meta {
+            margin: 8px 0 0 0;
+            color: rgba(255,255,255,0.70);
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .exp6-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 12px auto 0 auto;
+            padding: 7px 16px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 800;
+
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.14);
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.15s ease, transform 0.15s ease;
+        }
+
+        .exp6-link:hover {
+            background: rgba(255,255,255,0.14);
+            transform: translateY(-1px);
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .exp6-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 575px) {
+            .exp6-grid { grid-template-columns: 1fr; }
+            .exp6-card { min-height: auto; }
+        }
+
+       /* =========================
+        CERTIFICATIONS — DESKTOP 6x2 GRID
+        (6 columns x 2 rows on desktop)
+        Keep your existing mobile CSS as-is.
+        ========================= */
+
+        .certs-wrap{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 26px 22px;
+        }
+
+        /* DESKTOP: 6 columns */
+        .certs-grid{
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 14px;
+        }
+
+        /* compact card so 6 columns fits well */
+        .cert-card{
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.10);
+        border-radius: 16px;
+        box-shadow: 0 10px 26px rgba(0,0,0,0.20);
+
+        padding: 14px 12px;
+        min-height: 180px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        }
+
+        /* bigger + clearer, no box */
+        .cert-logo{
+        height: 100px;
+        width: min(150px, 100%);
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
+        }
+
+        /* keep labels aligned and compact */
+        .cert-name{
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: rgba(255,255,255,0.92);
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* keep consistent height */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2.4em;
+        }
+
+        /* Optional: tighten title spacing */
+        .certs-subtitle{
+        margin-bottom: 14px;
+        opacity: 0.85;
+        }
+
+
+
+        /* ===== Tablet (<= 991px): 2 columns, tighter cards ===== */
+        @media (max-width: 991px) {
+        .certs-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .cert-card {
+            min-height: 150px;
+            padding: 12px 10px;
+        }
+
+        .cert-logo {
+            width: 110px;
+            height: 80px;
+        }
+
+        .cert-name {
+            font-size: 13px;
+        }
+        }
+
+        /* ===== Mobile (<= 575px): 2 columns, very compact ===== */
+        @media (max-width: 575px) {
+        .certs-wrap {
+            padding: 16px;
+        }
+
+        /* IMPORTANT: keep 2 columns on mobile */
+        .certs-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .cert-card {
+            min-height: 130px;
+            padding: 10px 8px;
+            border-radius: 14px;
+        }
+
+        .cert-logo {
+            width: 95px;
+            height: 68px;
+        }
+
+        .cert-name {
+            font-size: 12px;
+            line-height: 1.2;
+            margin-top: 6px;
+        }
+
+        .certs-title {
+            font-size: 24px;
+        }
+
+        .certs-subtitle {
+            font-size: 14px;
+        }
+        }
+
 	</style>
 
     </head>
@@ -402,11 +637,10 @@ https://templatemo.com/tm-528-elegance
                             <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
                             <div class="nav-box navbar-collapse">
                                 <ul class="navigation-menu nav navbar-nav navbars" id="nav">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="experience.html">Experience</a></li>
-                                    <li><a href="projects.html">Projects</a></li>
-                                    <li><a href="certificates.html">Certifications</a></li>
-                                    <li data-menuanchor="slide09"><a href="#slide09">Contact</a></li>
+                                    <li data-menuanchor="slide01"><a href="#slide01">Home</a></li>
+                                    <li data-menuanchor="slide03"><a href="#slide03">Experience</a></li>
+                                    <li data-menuanchor="slide05"><a href="#slide05">Certifications</a></li>
+                                    <li data-menuanchor="slide11"><a href="#slide11">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -418,6 +652,8 @@ https://templatemo.com/tm-528-elegance
         
 
         <div id="fullpage" class="fullpage-default">
+            
+            <!-- SLIDE 01: HOME -->
             <div class="section animated-row" data-section="slide01">
                 <div class="section-inner d-flex align-items-center justify-content-center" style="min-height: 100vh;">
                     <div class="welcome-box text-center animate" data-animate="fadeInUp">
@@ -439,7 +675,7 @@ https://templatemo.com/tm-528-elegance
                 </div>
             </div>
 
-
+            <!-- SLIDE 02: ABOUT -->
             <div class="section animated-row" data-section="slide02">
                 <div class="section-inner">
                     <div class="about-section">
@@ -447,7 +683,7 @@ https://templatemo.com/tm-528-elegance
                             <div class="col-lg-8 wide-col-laptop">
                                 <div class="row">
                                     <!-- Text Content -->
-                                    <div class="col-md-7">
+                                    <div class="col-md-8">
                                         <div class="about-contentbox animate" data-animate="fadeInUp"
                                             style="padding: 30px; border-radius: 16px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(4px); box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);">
                                             <h3 class="mb-4" style="font-weight: 700; color: #fff;">About Me</h3>
@@ -472,7 +708,7 @@ https://templatemo.com/tm-528-elegance
                                         </div>
                                     </div>
 
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <br><br><br>
                                         <figure class="about-img animate" data-animate="fadeInUp">
                                             <img src="images/me.jpeg" class="rounded" alt="tayalarajan" style="width: 100%; height: 100%;">
@@ -502,8 +738,95 @@ https://templatemo.com/tm-528-elegance
                 </div>
             </div>
 
-
+            <!-- SLIDE 03: EXPERIENCE (Renumbered from duplicate slide02) -->
             <div class="section animated-row" data-section="slide03">
+            <div class="section-inner">
+                <div class="row justify-content-center">
+                <div class="col-md-10 wide-col-laptop">
+                    <div class="glass-container animate exp6-wrap" data-animate="fadeInUp">
+
+                    <div class="title-block text-center">
+                        <h3 class="project-title">EXPERIENCE</h3>
+                        <p class="tag-gradient">Designing, Building & Scaling AI, ML, Data & Software Systems</p>
+                    </div>
+
+                    <div class="exp6-grid">
+
+                        <!-- 1) Cancer Institute NSW -->
+                        <div class="exp6-card">
+                        <img class="exp6-logo" src="images/Experience/cinsw.png" alt="Cancer Institute NSW">
+                        <div class="exp6-content">
+                            <p class="exp6-title">Data Scientist</p>
+                            <p class="exp6-company">Cancer Institute NSW</p>
+                            <p class="exp6-meta">Jul 2025 - Nov 2025 · 5 mos<br>Sydney, NSW · Hybrid</p>
+                            <a class="exp6-link" href="https://www.cancer.nsw.gov.au/" target="_blank" rel="noopener">Visit</a>
+                        </div>
+                        </div>
+
+                        <!-- 2) AirLabOne -->
+                        <div class="exp6-card">
+                        <img class="exp6-logo" src="images/Project/project9.png" alt="AirLabOne">
+                        <div class="exp6-content">
+                            <p class="exp6-title">Machine Learning Engineer</p>
+                            <p class="exp6-company">AirLabOne</p>
+                            <p class="exp6-meta">Jun 2025 - Jul 2025<br>Sydney, NSW</p>
+                            <a class="exp6-link" href="https://airlabone.com/" target="_blank" rel="noopener">Visit</a>
+                        </div>
+                        </div>
+
+                        <!-- 3) Turing -->
+                        <div class="exp6-card">
+                        <img class="exp6-logo" src="images/Experience/turing.png" alt="Turing">
+                        <div class="exp6-content">
+                            <p class="exp6-title">AI / Python Engineer</p>
+                            <p class="exp6-company">Turing · Contract</p>
+                            <p class="exp6-meta">Aug 2024 - Aug 2025 · 1 yr 1 mo<br>Sydney, NSW</p>
+                            <a class="exp6-link" href="https://www.turing.com/" target="_blank" rel="noopener">Visit</a>
+                        </div>
+                        </div>
+
+                        <!-- 4) Deneka IT -->
+                        <div class="exp6-card">
+                        <img class="exp6-logo" src="images/Experience/deneka.png" alt="Deneka IT">
+                        <div class="exp6-content">
+                            <p class="exp6-title">Software Engineer</p>
+                            <p class="exp6-company">Deneka IT</p>
+                            <p class="exp6-meta">Feb 2024 - Aug 2024 · 7 mos<br>Sydney, NSW · Hybrid</p>
+                            <a class="exp6-link" href="https://denekait.com.au/" target="_blank" rel="noopener">Visit</a>
+                        </div>
+                        </div>
+
+                        <!-- 5) Jio Platforms Limited -->
+                        <div class="exp6-card">
+                        <img class="exp6-logo" src="images/Experience/jio.png" alt="Jio Platforms Limited">
+                        <div class="exp6-content">
+                            <p class="exp6-title">Software Development Engineer</p>
+                            <p class="exp6-company">Jio Platforms Limited</p>
+                            <p class="exp6-meta">Nov 2022 - Jan 2024 · 1 yr 3 mos<br>Bengaluru · Hybrid</p>
+                            <a class="exp6-link" href="https://secureid.jio.com/" target="_blank" rel="noopener">SecureID</a>
+                        </div>
+                        </div>
+
+                        <!-- 6) Infosys -->
+                        <div class="exp6-card">
+                        <img class="exp6-logo" src="images/Experience/infosys.png" alt="Infosys">
+                        <div class="exp6-content">
+                            <p class="exp6-title">Specialist Programmer</p>
+                            <p class="exp6-company">Infosys</p>
+                            <p class="exp6-meta">Nov 2020 - Oct 2022 · 2 yrs<br>Chennai, Tamil Nadu, India · Remote</p>
+                            <a class="exp6-link" href="https://www.infosys.com/" target="_blank" rel="noopener">Visit</a>
+                        </div>
+                        </div>
+
+                    </div> <!-- /exp6-grid -->
+                    </div> <!-- /glass-container -->
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- SLIDE 04: EDUCATION -->
+            <div class="section animated-row" data-section="slide04">
                 <div class="section-inner">
                     <div class="row justify-content-center">
                         <div class="col-md-10 wide-col-laptop">
@@ -550,9 +873,101 @@ https://templatemo.com/tm-528-elegance
                 </div>
             </div>
 
+            <!-- SLIDE 05: CERTIFICATIONS -->
+            <div class="section animated-row" data-section="slide05">
+  <div class="section-inner">
+    <div class="row justify-content-center">
+      <div class="col-md-10 wide-col-laptop">
+        <div class="title-block animate text-center" data-animate="fadeInUp">
+          <h3 style="font-weight: 700; font-size: 32px;">Certifications</h3>
+          <p style="font-size: 16px; color: #ccc;">Verified credentials across AI, Cloud, Data, and Engineering</p>
+        </div>
 
+        <div class="certs-wrap animate" data-animate="fadeInUp">
+          <div class="certs-grid">
 
-            <div class="section animated-row" data-section="slide04">
+            <!-- 1 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New1/cert1.png" alt="AWS Solutions Architect Associate">
+              <p class="cert-name">AWS Certified Solutions Architect Associate</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New/new-cert1.png" alt="AWS ML Specialty">
+              <p class="cert-name">AWS Certified Machine Learning – Specialty</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New/new-cert6.png" alt="AWS AI Practitioner">
+              <p class="cert-name">AWS Certified AI Practitioner</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New1/cert2.jpg" alt="CKAD">
+              <p class="cert-name">Certified Kubernetes Application Developer</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New/new-cert2.png" alt="SAS Viya Winner">
+              <p class="cert-name">SAS Viya for Learners Challenge Winner 2024</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New/new-cert4.png" alt="PyTorch Fundamentals">
+              <p class="cert-name">Microsoft PyTorch Fundamentals</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New/new-cert5.png" alt="Generative AI Essentials">
+              <p class="cert-name">Career Essentials in Generative AI</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/Old/cert9.png" alt="AI Agents Course">
+              <p class="cert-name">AI Agents Course</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/New/new-cert3.png" alt="Kaggle Pandas">
+              <p class="cert-name">Kaggle – Pandas Essentials</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/Old/cert4.png" alt="Google Code Jam">
+              <p class="cert-name">Google Code Jam</p>
+            </div>
+
+            <!-- 11 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/Old/cert5.png" alt="Google Kick Start">
+              <p class="cert-name">Google Kick Start</p>
+            </div>
+
+            <!-- 12 -->
+            <div class="cert-card">
+              <img class="cert-logo" src="images/Certificate/Old/cert6.png" alt="Code Gladiators">
+              <p class="cert-name">Techgig Code Gladiators</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- SLIDE 06: NOTABLES -->
+            <div class="section animated-row" data-section="slide06">
                 <div class="section-inner">
                     <div class="row justify-content-center">
                         <div class="col-md-10 wide-col-laptop">
@@ -610,7 +1025,7 @@ https://templatemo.com/tm-528-elegance
                                                     <img src="images/turing.png" alt="Turing" style="max-width: 120px;">
                                                 </div>
                                                 <div class="testimonial-content text-center">
-                                                    <h4 style="color: #fff;">LLM - Python Engineer (Turing)</h4>
+                                                    <h4 style="color: #fff;">AI - Python Engineer (Turing)</h4>
                                                     <span class="badge badge-pill" style="background: #000000; color: #fff; font-size: 13px;">Engineer</span>
                                                     <p class="mt-3" style="color: #ccc;">Fine-tuned large language models, built RAG systems, and deployed adaptive AI agents using Python, LangChain, and MLOps best practices.</p>
                                                 </div>
@@ -639,8 +1054,8 @@ https://templatemo.com/tm-528-elegance
                 </div>
             </div>
 
-            
-            <div class="section animated-row" data-section="slide05">
+            <!-- SLIDE 07: DOMAIN EXPERTISE -->
+            <div class="section animated-row" data-section="slide07">
                 <div class="section-inner">
                     <div class="row justify-content-center">
                         <div class="col-md-8 wide-col-laptop">
@@ -728,7 +1143,8 @@ https://templatemo.com/tm-528-elegance
             </div>
 
 
-            <div class="section animated-row" data-section="slide06">
+            <!-- SLIDE 08: SKILLS -->
+            <div class="section animated-row" data-section="slide08">
                 <div class="section-inner">
                     <div class="row justify-content-center">
                         <div class="col-md-10 wide-col-laptop">
@@ -806,8 +1222,8 @@ https://templatemo.com/tm-528-elegance
             </div>
 
 
-
-            <div class="section animated-row" data-section="slide07">
+            <!-- SLIDE 09: LEETCODE -->
+            <div class="section animated-row" data-section="slide09">
                 <div class="section-inner">
                     <div class="container mt-4" style="background-color: transparent;">
                         <div class="title-block animate text-center" data-animate="fadeInUp">
@@ -858,72 +1274,83 @@ https://templatemo.com/tm-528-elegance
                 </div>
             </div>
 
-            <!-- WEBINAR SECTION – Optimized Responsive Video Embed -->
-            <div class="section animated-row" data-section="slide08">
-            <div class="section-inner">
-                <div class="row justify-content-center">
-                <div class="col-md-10 wide-col-laptop">
-                    
-                    <!-- Section Heading -->
-                    <div class="title-block animate text-center" data-animate="fadeInUp">
-                    <span style="letter-spacing: 2px; color: #ccc;">WEBINAR</span>
-                    <h2 style="font-weight: 700; font-size: 32px;">Live AWS Webinar: Building Tayal AI</h2>
-                    <p style="color: #ccc; font-size: 16px;">
-                        A hands-on walkthrough of creating and deploying an AI Assistant on AWS
-                    </p>
-                    </div>
+            <!-- SLIDE 10: WEBINAR – Optimized Two-Column Layout -->
+            <div class="section animated-row" data-section="slide10">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 wide-col-laptop">
+                            
+                            <!-- Main Row: Two Columns -->
+                            <div class="row align-items-center">
+                                
+                                <!-- LEFT COLUMN: Text Content -->
+                                <div class="col-lg-6 text-left mb-4 mb-lg-0 animate" data-animate="fadeInUp">
+                                    <div class="title-block" style="text-align: left; margin-bottom: 20px;">
+                                        <span style="letter-spacing: 2px; color: #b300ff; font-weight: 700; font-size: 14px; text-transform: uppercase;">
+                                            <i class="fas fa-video mr-2"></i>Webinar
+                                        </span>
+                                        <h2 style="font-weight: 800; font-size: 36px; line-height: 1.2; margin-top: 10px; color: #fff;">
+                                            Building Tayal AI<br>on AWS
+                                        </h2>
+                                    </div>
 
-                    <!-- Embedded Video -->
-                    <div class="text-center animate" data-animate="fadeInUp" style="margin: 18px auto 16px auto; max-width: 550px;">
-                    <div class="video-container" style="
-                        position: relative;
-                        width: 100%;
-                        padding-bottom: 56.25%; /* 16:9 ratio */
-                        height: 0;
-                        border-radius: 16px;
-                        overflow: hidden;
-                        background: #111;
-                        box-shadow: 0 0 14px rgba(0,0,0,0.18);">
-                        <iframe src="https://www.youtube.com/embed/ZarZ8oXza8U"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;"
-                        frameborder="0"
-                        allowfullscreen
-                        title="Live AWS Webinar: Building Tayal AI">
-                        </iframe>
-                    </div>
-                    </div>
+                                    <p style="color: #ddd; font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                                        I recently delivered a live, hands-on session for <strong>DevOps Career Hub</strong>, architecting and deploying a real-world AI assistant.
+                                    </p>
+                                    
+                                    <p style="color: #aaa; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">
+                                        This walkthrough covers the full lifecycle: from Python code to scalable cloud infrastructure using <strong>AWS Bedrock, Lambda, and API Gateway</strong>.
+                                    </p>
 
-                    <!-- Description & CTA -->
-                    <div class="text-center" style="max-width: 650px; margin: 0 auto;">
-                    <p style="color: #ccc; font-size: 16px; margin-top: 10px;">
-                        I recently delivered a live, hands-on webinar for <strong>DevOps Career Hub</strong>, where I showcased how to architect and deploy a real-world AI assistant — <b>Tayal AI</b> — using the power of AWS cloud services.
-                    </p>
-                    <p style="color: #ccc; font-size: 16px;">
-                        The session was practical, innovative, and focused on building and shipping production-ready AI products.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=ZarZ8oXza8U" target="_blank"
-                        style="
-                        color: #fff;
-                        background: linear-gradient(135deg, #6e00ff, #b300ff);
-                        padding: 10px 22px;
-                        border-radius: 28px;
-                        font-weight: 600;
-                        text-decoration: none;
-                        box-shadow: 0 2px 8px rgba(110, 0, 255, 0.09);
-                        margin-top: 12px;
-                        display: inline-block;">
-                        Watch Full Webinar
-                    </a>
-                    </div>
+                                    <a href="https://www.youtube.com/watch?v=ZarZ8oXza8U" target="_blank"
+                                        style="
+                                        display: inline-flex;
+                                        align-items: center;
+                                        color: #fff;
+                                        background: linear-gradient(135deg, #6e00ff, #b300ff);
+                                        padding: 12px 30px;
+                                        border-radius: 30px;
+                                        font-weight: 600;
+                                        text-decoration: none;
+                                        box-shadow: 0 4px 15px rgba(110, 0, 255, 0.3);
+                                        transition: transform 0.2s;">
+                                        <i class="fab fa-youtube mr-2"></i> Watch Full Webinar
+                                    </a>
+                                </div>
 
-                </div>
+                                <!-- RIGHT COLUMN: Video Embed -->
+                                <div class="col-lg-6 animate" data-animate="fadeInUp">
+                                    <div class="video-wrapper" style="
+                                        position: relative;
+                                        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                                        height: 0;
+                                        overflow: hidden;
+                                        border-radius: 12px;
+                                        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                                        background: #000;
+                                        border: 1px solid rgba(255,255,255,0.1);">
+                                        
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/ZarZ8oXza8U"
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen
+                                            title="Live AWS Webinar">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                            </div> <!-- /row -->
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
 
 
-            <!-- Contact Section -->
-            <div class="section animated-row" data-section="slide09">
+            <!-- SLIDE 11: CONTACT -->
+            <div class="section animated-row" data-section="slide11">
                 <div class="section-inner">
                     <div class="row justify-content-center">
                     <div class="col-md-8 text-center">
@@ -965,37 +1392,6 @@ https://templatemo.com/tm-528-elegance
                 </div>
             </div>
 
-            <!-- 
-            <div class="section animated-row">
-            <div class="section-inner">
-                <div class="row justify-content-center">
-                <div class="col-md-8 wide-col-laptop text-center">
-                    <div class="title-block animate" data-animate="fadeInUp">
-                    <span style="letter-spacing: 2px; color: #ccc;">BEING ME</span>
-                    <h2 style="font-weight: 700; font-size: 32px;">Beyond the Code</h2>
-                    </div>
-                    <div class="row justify-content-center mt-4 animate" data-animate="fadeInUp">
-                    <div class="col-md-5 mb-4">
-                        <div class="card" style="background: rgba(255,255,255,0.03); border-radius: 16px; box-shadow: 0 0 12px rgba(255,255,255,0.05);">
-                        <img src="images/being2.jpg" class="card-img-top" alt="Pet" style="border-top-left-radius: 16px; border-top-right-radius: 16px;" />
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #fff;">Pet</h5>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5 mb-4">
-                        <div class="card" style="background: rgba(255,255,255,0.03); border-radius: 16px; box-shadow: 0 0 12px rgba(255,255,255,0.05);">
-                        <img src="images/being3.jpg" class="card-img-top" alt="Travel & Vibes" style="border-top-left-radius: 16px; border-top-right-radius: 16px;" />
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #fff;">Travel & Vibes</h5>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            Being Me Section -->
         </div>
     </div>  
 
